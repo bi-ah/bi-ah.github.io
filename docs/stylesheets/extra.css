@@ -1,0 +1,12 @@
+.md-content {
+    max-width: 980px;
+}
+
+.md-typeset h1 {
+    letter-spacing: -0.02em;
+}
+
+.md-typeset .lead {
+    font-size: 1.1rem;
+    opacity: 0.92;
+}

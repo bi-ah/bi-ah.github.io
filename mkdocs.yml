@@ -1,0 +1,73 @@
+site_name: Bilal Ahmed
+site_description: Senior engineering leader in fintech, security, and compliance-native SaaS. Builder at SYNVRA.
+site_url: https://bilal-ahmed.me/
+site_author: Bilal Ahmed
+
+repo_name: bi-ah/bi-ah.github.io
+repo_url: https://github.com/bi-ah/bi-ah.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+
+nav:
+  - Home: index.md
+  - Work:
+      - Overview: work/index.md
+      - Case Study Template: work/case-study-template.md
+  - Playbooks:
+      - Overview: playbooks/index.md
+      - Playbook Template: playbooks/playbook-template.md
+  - Insights:
+      - Overview: insights/index.md
+      - Insight Template: insights/insight-template.md
+  - About: about.md
+  - Contact: contact.md
+  - CV: cv.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/biah/
+    - icon: fontawesome/brands/github
+      link: https://github.com/bi-ah
+
+copyright: >
+  © 2025 Bilal Ahmed. Content: CC BY 4.0. Code: MIT. CV/media: all rights reserved.
