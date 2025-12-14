@@ -1,3 +1,9 @@
+---
+hide:
+
+- navigation
+---
+
 # Playbooks
 
 Pillar pages that make the site feel mature.

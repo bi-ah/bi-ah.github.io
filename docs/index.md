@@ -1,27 +1,49 @@
-# Bilal Ahmed
+---
+hide:
+  - navigation
+  - toc
+---
 
-<div class="lead">
-Senior engineering leader building reliable, secure, compliance-ready software — across fintech/payments, cybersecurity, and regulated SaaS.
+<div class="hero">
+<div class="kicker">Engineering Leadership • Fintech • Security • Compliance-native SaaS</div>
+
+<div class="headline">Bilal Ahmed</div>
+
+<div class="subhead">
+I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech,
+cybersecurity automation, and regulated SaaS (LIMS).
+</div>
 </div>
 
-## What I do
+<div class="home-cta" markdown="1">
+[ :material-briefcase: View Work ](work/index.md){ .md-button .md-button--primary }
+[ :material-book-open-variant: Playbooks ](playbooks/index.md){ .md-button }
+[ :material-file-account: Download CV ](cv.md){ .md-button }
+[ :material-email: Contact ](contact.md){ .md-button }
+</div>
 
-- **Build & lead engineering** for high-stakes products (payments, security, compliance-heavy platforms)
-- **Design systems that ship**: scalable architecture, DevSecOps, audit readiness, delivery discipline
-- **Translate complexity into outcomes**: roadmap → execution → measurable results
+---
 
-## Proof (edit as needed)
+## Proof, not fluff
 
-- Co-founder & CEO at **SYNVRA** (compliance-native LIMS & validation acceleration)
-- 20+ years building and leading software across fintech, security, and B2B SaaS
+- :material-check-circle-outline: Co-founder & CEO at **SYNVRA** — compliance-native LIMS & validation acceleration  
+- :material-check-circle-outline: 20+ years in **fintech/payments**, **security**, and **B2B SaaS**  
+- :material-check-circle-outline: Strong bias for **delivery discipline** + measurable outcomes
 
-## Where to start
+## What you’ll find here
 
-- **Work** → case studies
-- **Playbooks** → deep, structured “how-to” pages
-- **Insights** → short posts for LinkedIn
+### :material-briefcase: Work
 
-## Contact / CTA
+Decision-dense case studies: constraints → tradeoffs → execution → results.
 
-→ [/contact](contact.md)  
-→ [/cv](cv.md)
+### :material-book-open-variant: Playbooks
+
+Reusable guides: compliance-by-design, multi-tenant systems, safe AI in regulated workflows.
+
+### :material-lightbulb-outline: Insights
+
+Short posts designed to share on LinkedIn.
+
+---
+
+> If you’re hiring or building in regulated / high-stakes domains, start with **Work**, then **Playbooks**.
