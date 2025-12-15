@@ -97,3 +97,6 @@ extra:
 
 copyright: >
   © 2025 Bilal Ahmed. Content: CC BY 4.0. Code: MIT. Resume/media: all rights reserved.
+
+extra_javascript:
+  - javascripts/external-links.js
