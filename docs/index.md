@@ -4,23 +4,22 @@ hide:
   - toc
 ---
 
-<div class="hero">
-<div class="kicker">Engineering Leadership • Fintech • Security • Compliance-native SaaS</div>
+<div class="hero hero--bg">
+  <div class="kicker">Engineering Leadership • Fintech • Security • Compliance-native SaaS</div>
+  <div class="headline">Bilal Ahmed</div>
+  <div class="subhead">
+    I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech,
+    cybersecurity automation, and regulated SaaS (LIMS).
+  </div>
 
-<div class="headline">Bilal Ahmed</div>
+  <div class="hero-cta">
+    [ :material-briefcase: View Work ](work/index.md){ .md-button .md-button--primary }
+    [ :material-book-open-variant: Playbooks ](playbooks/index.md){ .md-button }
+    [ :material-file-account: Download CV ](cv.md){ .md-button }
+    [ :material-email: Contact ](contact.md){ .md-button }
+  </div>
+</div>
 
-<div class="subhead">
-I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech,
-cybersecurity automation, and regulated SaaS (LIMS).
-</div>
-</div>
-
-<div class="home-cta" markdown="1">
-[ :material-briefcase: View Work ](work/index.md){ .md-button .md-button--primary }
-[ :material-book-open-variant: Playbooks ](playbooks/index.md){ .md-button }
-[ :material-file-account: Download CV ](cv.md){ .md-button }
-[ :material-email: Contact ](contact.md){ .md-button }
-</div>
 
 ---
 
