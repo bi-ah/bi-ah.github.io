@@ -10,6 +10,7 @@ repo_url: https://github.com/bi-ah/bi-ah.github.io
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   logo: assets/mark.svg
   favicon: assets/favicon.png
@@ -88,6 +89,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/external-links.js
+
 extra:
   social:
     - icon: fontawesome/brands/linkedin
@@ -97,6 +101,3 @@ extra:
 
 copyright: >
   © 2025 Bilal Ahmed. Content: CC BY 4.0. Code: MIT. Resume/media: all rights reserved.
-
-extra_javascript:
-  - javascripts/external-links.js

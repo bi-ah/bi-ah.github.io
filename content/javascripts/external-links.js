@@ -1,47 +1,56 @@
-// Open all external links in a new tab (site-wide), safely.
-// - Applies to http/https links whose hostname differs from the current site.
-// - Leaves internal/relative links, hash links, mailto:, tel:, and other schemes unchanged.
+// Open external links in a new tab (site-wide).
+// - Only affects http(s) URLs pointing to a different origin.
+// - Leaves internal/relative links and special schemes (mailto:, tel:, etc.) untouched.
+
 (function () {
-  function isExternal(a) {
+  function isHttpUrl(href) {
+    return /^https?:\/\//i.test(href) || /^\/\//.test(href);
+  }
+
+  function isSkippableScheme(href) {
+    return /^(mailto:|tel:|sms:|whatsapp:|skype:)/i.test(href);
+  }
+
+  function toAbsolute(href) {
+    // Support protocol-relative links (//example.com)
+    if (/^\/\//.test(href)) {
+      return window.location.protocol + href;
+    }
     try {
-      var href = a.getAttribute("href");
-      if (!href) return false;
-
-      // Ignore anchors, mailto, tel, and other non-http(s) schemes
-      if (href.startsWith("#")) return false;
-      if (/^(mailto:|tel:|sms:|javascript:)/i.test(href)) return false;
-
-      // Resolve relative URLs
-      var url = new URL(href, window.location.href);
-
-      // Only http(s) links
-      if (!(url.protocol === "http:" || url.protocol === "https:")) return false;
-
-      // Compare hostnames (handles custom domains + GitHub Pages)
-      return url.hostname !== window.location.hostname;
-    } catch (e) {
-      return false;
+      return new URL(href, window.location.href);
+    } catch (_err) {
+      return null;
     }
   }
 
-  function apply() {
-    var links = document.querySelectorAll('a[href]');
-    links.forEach(function (a) {
-      if (!isExternal(a)) return;
+  function markExternalLinks() {
+    var anchors = document.querySelectorAll('a[href]');
+    var origin = window.location.origin;
 
-      a.setAttribute("target", "_blank");
+    anchors.forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      if (isSkippableScheme(href)) return;
+      if (!isHttpUrl(href)) return;
 
-      // Preserve existing rel, add security tokens
-      var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
-      if (!rel.includes("noopener")) rel.push("noopener");
-      if (!rel.includes("noreferrer")) rel.push("noreferrer");
-      a.setAttribute("rel", rel.join(" "));
+      var url = toAbsolute(href);
+      if (!url) return;
+      if (url.origin === origin) return;
+
+      a.setAttribute('target', '_blank');
+
+      // Preserve existing rel values, but ensure safety
+      var rel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+      ['noopener', 'noreferrer'].forEach(function (v) {
+        if (!rel.includes(v)) rel.push(v);
+      });
+      a.setAttribute('rel', rel.join(' '));
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", apply);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', markExternalLinks);
   } else {
-    apply();
+    markExternalLinks();
   }
 })();

@@ -1,47 +1,84 @@
 ---
+template: home.html
 hide:
   - navigation
   - toc
 ---
 
-<div class="hero hero--bg" markdown="1">
-  <div class="kicker">Engineering Leadership • Fintech • Security • Compliance-native SaaS</div>
-  <div class="headline">Bilal Ahmed</div>
-  <div class="subhead">
-    I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech,
-    cybersecurity automation, and regulated SaaS (LIMS).
-  </div>
+## Everything you’d expect
 
-  <div class="home-cta" markdown="1">
+<div class="home-grid" markdown>
 
-  [:material-download: Download CV (PDF)](./resume/Bilal_Ahmed_CV.pdf){ .md-button .md-button--primary }
+### :material-language-markdown: Write in Markdown
 
-  </div>
+Keep the workflow simple: write, commit, publish.
+
+### :material-magnify: Fast search
+
+Find anything instantly with built-in client-side search.
+
+### :material-shield-check: Security & compliance mindset
+
+Guides and playbooks shaped by real-world regulated delivery.
+
+### :material-rocket-launch: Ship consistently
+
+GitHub Pages + CI/CD-friendly docs that scale with you.
+
 </div>
 
+---
+
+## Explore
+
+<div class="home-split" markdown>
+
+### Research
+
+- **LIMS** — compliance-native SaaS design, validation, ALCOA+, ISO 17025 / GLP / GMP.
+- **AI** — LLMs, agentic systems, RAG, reliability & governance.
+
+[:material-arrow-right: Browse Research](/research/){ .md-button .md-button--primary }
+
+### Work
+
+Selected projects and outcomes across payments/fintech, cybersecurity automation, and SaaS delivery.
+
+[:material-arrow-right: View Work](/work/){ .md-button }
+
+</div>
 
 ---
 
-## Proof, not fluff
+## Now
 
-- :material-check-circle-outline: Co-founder & CEO at **SYNVRA** — compliance-native LIMS & validation acceleration  
-- :material-check-circle-outline: 20+ years in **fintech/payments**, **security**, and **B2B SaaS**  
-- :material-check-circle-outline: Strong bias for **delivery discipline** + measurable outcomes
+<div class="home-cards" markdown>
 
-## What you’ll find here
+### What I’m building
 
-### :material-briefcase: Work
+**SYNVRA** — compliance-native LIMS & validation automation for regulated labs.
 
-Decision-dense case studies: constraints → tradeoffs → execution → results.
+### What I write about
 
-### :material-book-open-variant: Playbooks
+Engineering leadership, secure systems, fintech rails, and audit-ready SaaS.
 
-Reusable guides: compliance-by-design, multi-tenant systems, safe AI in regulated workflows.
+### How to work with me
 
-### :material-lightbulb-outline: Insights
+Hiring, advisory, partnerships, and consulting — start with email.
 
-Short posts designed to share on LinkedIn.
+[:material-email: Contact](/contact/){ .md-button .md-button--primary }
+
+</div>
 
 ---
 
-> If you’re hiring or building in regulated / high-stakes domains, start with **Work**, then **Playbooks**.
+<div class="home-cta-band" markdown>
+
+### Let’s talk
+
+If you’re hiring or want to collaborate, send a short note with context and your timezone.
+
+[:material-email: Email me](mailto:contact@bilal-ahmed.me){ .md-button .md-button--primary }
+[:material-linkedin: LinkedIn](https://www.linkedin.com/in/biah){ .md-button }
+
+</div>

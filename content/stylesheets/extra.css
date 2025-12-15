@@ -3,20 +3,24 @@
   max-width: 1200px;
 }
 
-/* Website-like layout (keep mobile nav working; remove sidebars on desktop) */
-.md-sidebar--secondary {
-  display: none; /* remove right-side TOC */
+/* Homepage-only layout: hide sidebars & allow full-bleed hero */
+body[data-md-page="index"] .md-sidebar--primary,
+body[data-md-page="index"] .md-sidebar--secondary {
+  display: none;
 }
 
 @media (min-width: 900px) {
-  .md-sidebar--primary {
-    display: none; /* remove left docs sidebar; top tabs remain */
-  }
-
-  /* reclaim sidebar space */
-  .md-main__inner {
+  body[data-md-page="index"] .md-main__inner {
     grid-template-columns: 0 1fr;
   }
+}
+
+body[data-md-page="index"] .md-content {
+  max-width: none;
+}
+
+body[data-md-page="index"] .md-content__inner {
+  padding: 0;
 }
 
 /* Typography */
@@ -233,4 +237,168 @@ a.cta {
 a.cta.primary {
   border: none;
   background: rgba(99, 102, 241, 0.14);
+}
+
+/* ------------------------------------------------------------
+   Homepage (landing) layout
+   ------------------------------------------------------------ */
+
+/* Full-bleed content on the homepage only */
+body[data-md-page="index"] .md-main__inner {
+  max-width: none;
+}
+
+body[data-md-page="index"] .md-content {
+  max-width: none;
+}
+
+body[data-md-page="index"] .md-content__inner {
+  padding: 0;
+}
+
+body[data-md-page="index"] .md-header,
+body[data-md-page="index"] .md-tabs {
+  box-shadow: none;
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 1.25rem auto 0;
+}
+
+.home-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+}
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 18, 33, 0.84) 0%,
+    rgba(10, 18, 33, 0.66) 45%,
+    rgba(10, 18, 33, 0.12) 100%
+  );
+}
+
+.home-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding: 3.2rem 2.2rem;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-hero__kicker {
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.home-hero__title {
+  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  line-height: 1.08;
+  margin: 0;
+}
+
+.home-hero__subtitle {
+  margin: 1rem 0 0 0;
+  max-width: 62ch;
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.home-hero__actions {
+  margin-top: 1.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Make the primary CTA look more “producty” */
+.home-hero__actions .md-button--primary {
+  border-radius: 12px;
+  padding: 0.7rem 1.05rem;
+}
+
+.home-hero__actions .md-button {
+  border-radius: 12px;
+  padding: 0.7rem 1.05rem;
+  backdrop-filter: blur(4px);
+}
+
+.home-content {
+  padding: 2.2rem 1.1rem 0;
+}
+
+.home-section {
+  padding: 1.5rem 0;
+}
+
+.home-section--subtle {
+  padding: 1.75rem 0;
+}
+
+.home-section--band {
+  background: rgba(127, 127, 127, 0.06);
+  border-top: 1px solid rgba(127, 127, 127, 0.12);
+  border-bottom: 1px solid rgba(127, 127, 127, 0.12);
+}
+
+.home-section__title {
+  font-size: 1.4rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.home-section__lead {
+  margin: 0 0 1rem 0;
+  opacity: 0.85;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.home-grid h3 {
+  margin-top: 0;
+}
+
+.home-list {
+  margin: 0.25rem 0 1rem 0;
+}
+
+.home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    margin: 1rem 0.75rem 0;
+    border-radius: 16px;
+  }
+
+  .home-hero__inner {
+    padding: 2.2rem 1.35rem;
+    min-height: 360px;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
 }
