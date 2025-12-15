@@ -1,72 +1,92 @@
 ---
 template: home.html
 hide:
-  - navigation
   - toc
 ---
+
+## Quick start
+
+<div class="home-cards" markdown>
+
+### :material-briefcase: Start with Work
+
+If you're evaluating me for a role or project, begin with decision-dense case studies: constraints → tradeoffs → execution → outcomes.
+
+[:material-arrow-right: View Work](work/){ .md-button .md-button--primary }
+
+### :material-book-open-variant: Use a Playbook
+
+Reusable guides you can apply immediately — multi-tenant delivery, compliance-by-design, execution discipline, and reliable operations.
+
+[:material-arrow-right: Browse Playbooks](playbooks/){ .md-button }
+
+### :material-flask: Go deeper in Research
+
+Long-form writing under **Research → LIMS / AI** — structured articles with diagrams, references, and repeatable frameworks.
+
+[:material-arrow-right: Browse Research](research/){ .md-button }
+
+</div>
+
+<div class="home-band" markdown>
+
+<div class="home-stats" markdown>
+
+### Snapshot
+
+- :material-check-circle-outline: **20+ years** building in fintech, security, and B2B SaaS
+- :material-check-circle-outline: **Compliance-first** delivery mindset (audit trails, validation, evidence)
+- :material-check-circle-outline: **Bias to shipping** — pragmatic systems, measurable outcomes
+
+</div>
+
+</div>
 
 ## Everything you’d expect
 
 <div class="home-grid" markdown>
 
-### :material-language-markdown: Write in Markdown
+### :material-language-markdown: Markdown-first
 
-Keep the workflow simple: write, commit, publish.
+Write in Markdown, keep it in Git, ship with CI.
 
 ### :material-magnify: Fast search
 
-Find anything instantly with built-in client-side search.
+Search is always available in the header. The home search button opens it instantly.
 
-### :material-shield-check: Security & compliance mindset
+### :material-shield-check: Security & governance
 
-Guides and playbooks shaped by real-world regulated delivery.
+Patterns shaped by real regulated delivery — controls, auditability, and operational rigor.
 
-### :material-rocket-launch: Ship consistently
+### :material-rocket-launch: Low maintenance
 
-GitHub Pages + CI/CD-friendly docs that scale with you.
-
-</div>
-
----
-
-## Explore
-
-<div class="home-split" markdown>
-
-### Research
-
-- **LIMS** — compliance-native SaaS design, validation, ALCOA+, ISO 17025 / GLP / GMP.
-- **AI** — LLMs, agentic systems, RAG, reliability & governance.
-
-[:material-arrow-right: Browse Research](/research/){ .md-button .md-button--primary }
-
-### Work
-
-Selected projects and outcomes across payments/fintech, cybersecurity automation, and SaaS delivery.
-
-[:material-arrow-right: View Work](/work/){ .md-button }
+No subscriptions. GitHub Pages hosting. Simple, repeatable publishing.
 
 </div>
 
 ---
 
-## Now
+## Latest
 
 <div class="home-cards" markdown>
 
-### What I’m building
+### :material-lightbulb-outline: Insights
 
-**SYNVRA** — compliance-native LIMS & validation automation for regulated labs.
+Short, shareable posts designed for LinkedIn.
 
-### What I write about
+[:material-arrow-right: See Insights](insights/){ .md-button }
 
-Engineering leadership, secure systems, fintech rails, and audit-ready SaaS.
+### :material-book-open-variant: Featured Playbook
 
-### How to work with me
+Start here: a practical, opinionated guide you can reuse.
 
-Hiring, advisory, partnerships, and consulting — start with email.
+[:material-arrow-right: Open Playbooks](playbooks/){ .md-button }
 
-[:material-email: Contact](/contact/){ .md-button .md-button--primary }
+### :material-briefcase: Featured Case Study
+
+A concrete project story with constraints, tradeoffs, and outcomes.
+
+[:material-arrow-right: Open Work](work/){ .md-button }
 
 </div>
 

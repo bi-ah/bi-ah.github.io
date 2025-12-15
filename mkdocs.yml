@@ -19,6 +19,7 @@ theme:
     code: JetBrains Mono
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.top
     - navigation.footer
@@ -91,6 +92,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/external-links.js
+  - javascripts/home-search.js
 
 extra:
   social:
