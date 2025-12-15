@@ -15,8 +15,8 @@ hide:
   <div class="hero-cta">
     [ :material-briefcase: View Work ](work/index.md){ .md-button .md-button--primary }
     [ :material-book-open-variant: Playbooks ](playbooks/index.md){ .md-button }
-    [ :material-file-account: Download CV ](cv.md){ .md-button }
-    [ :material-email: Contact ](contact.md){ .md-button }
+    [ :material-file-account: Download Resume ](resume/index.md){ .md-button }
+    [ :material-email: Contact ](contact/index.md){ .md-button }
   </div>
 </div>
 

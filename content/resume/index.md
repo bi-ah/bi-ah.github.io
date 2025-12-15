@@ -4,11 +4,11 @@ hide:
   - toc
 ---
 
-# CV
+# Resume
 
 **Bilal Ahmed**  
 **Senior Engineering Leader – Payments, Security & SaaS**  
-Lahore, Pakistan · +92 333 860-6269 · bilalahmed.78@gmail.com  
+Lahore, Pakistan · +92 333 860-6269 · contact@bilal-ahmed.me  
 LinkedIn: https://www.linkedin.com/in/biah  
 
 **Open to:** Full-time remote roles from Pakistan (EOR or contractor). Open to relocation and employer-sponsored work authorization for the right long-term role. · **Time zone:** UTC+5  
@@ -197,4 +197,4 @@ Blend of **hands-on architecture** (.NET, Python, AWS) with **distributed team l
 
 ---
 
-**Download:** [Bilal_Ahmed_CV.pdf](assets/Bilal_Ahmed_CV.pdf)
+**Download (PDF):** [Bilal_Ahmed_CV.pdf](./Bilal_Ahmed_CV.pdf)

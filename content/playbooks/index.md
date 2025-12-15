@@ -1,8 +1,7 @@
 ---
 hide:
-
-- navigation
-    ---
+  - navigation
+---
 
 # Playbooks
 

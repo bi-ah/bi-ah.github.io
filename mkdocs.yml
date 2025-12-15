@@ -3,15 +3,16 @@ site_description: Senior engineering leader in fintech, security, and compliance
 site_url: https://bilal-ahmed.me/
 site_author: Bilal Ahmed
 
+docs_dir: content
+
 repo_name: bi-ah/bi-ah.github.io
 repo_url: https://github.com/bi-ah/bi-ah.github.io
-edit_uri: edit/main/docs/
 
 theme:
   name: material
   language: en
-  logo: assets/mark.svg          # add later (optional)
-  favicon: assets/favicon.png     # add later (optional)
+  logo: assets/mark.svg
+  favicon: assets/favicon.png
   font:
     text: Inter
     code: JetBrains Mono
@@ -25,7 +26,6 @@ theme:
     - navigation.tracking
     - toc.follow
     - content.code.copy
-    - content.action.edit
     - search.suggest
     - search.highlight
   palette:
@@ -55,9 +55,13 @@ nav:
   - Insights:
       - Overview: insights/index.md
       - Insight Template: insights/insight-template.md
-  - About: about.md
-  - Contact: contact.md
-  - CV: cv.md
+  - Research:
+      - Overview: research/index.md
+      - LIMS: research/lims/index.md
+      - AI: research/ai/index.md
+  - About: about/index.md
+  - Contact: contact/index.md
+  - Resume: resume/index.md
 
 plugins:
   - search
@@ -88,4 +92,4 @@ extra:
       link: https://github.com/bi-ah
 
 copyright: >
-  © 2025 Bilal Ahmed. Content: CC BY 4.0. Code: MIT. CV/media: all rights reserved.
+  © 2025 Bilal Ahmed. Content: CC BY 4.0. Code: MIT. Resume/media: all rights reserved.

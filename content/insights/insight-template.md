@@ -8,4 +8,4 @@
 
 ## Close (CTA)
 
-→ [/contact](../contact.md)
+→ [/contact](../contact/index.md)
