@@ -52,6 +52,75 @@
   }
 }
 
+/* ===== Header / Top Nav facelift ===== */
+
+/* Header background (works great with dark hero aesthetic) */
+.md-header {
+  background: linear-gradient(90deg,
+      rgba(9, 14, 24, 0.94) 0%,
+      rgba(15, 23, 42, 0.88) 55%,
+      rgba(15, 23, 42, 0.72) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+}
+
+/* Slightly refine site title */
+.md-header__title .md-header__topic {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  opacity: 0.98;
+}
+
+/* Logo size + nicer spacing */
+.md-header__button.md-logo img {
+  height: 28px;
+  /* adjust if needed */
+  width: auto;
+  border-radius: 6px;
+  /* makes square logos feel nicer */
+}
+
+.md-header::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg,
+      rgba(99, 102, 241, 0.0),
+      rgba(99, 102, 241, 0.55),
+      rgba(99, 102, 241, 0.0));
+}
+
+/* Tabs row (Home / Work / Playbooks) */
+.md-tabs {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Tabs look like premium pills on hover + active underline */
+.md-tabs__link {
+  opacity: 0.85;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  transition: background 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Active tab: subtle highlight + bottom glow */
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.14);
+  box-shadow: inset 0 -2px 0 rgba(99, 102, 241, 0.65);
+}
+
 /* Landing hero */
 .hero {
   padding: 1.2rem 0 0.5rem 0;
@@ -88,6 +157,16 @@
   flex-direction: column;
   justify-content: center;
   background: url("../assets/hero.png") right center / cover no-repeat;
+  /* Ensure readable hero text in both light/dark themes */
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero--bg a {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero--bg .kicker {
+  opacity: 0.78;
 }
 
 /* Dark overlay for readability */
@@ -129,6 +208,15 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 1rem;
+}
+
+/* Resume / page-level actions */
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.75rem 0 1.25rem 0;
 }
 
 a.cta {

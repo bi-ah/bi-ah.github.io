@@ -6,8 +6,15 @@ hide:
 
 # Resume
 
-**Bilal Ahmed**  
-**Senior Engineering Leader – Payments, Security & SaaS**  
+<div class="page-actions" markdown="1">
+
+[:material-download: Download PDF](./Bilal_Ahmed_CV.pdf){ .md-button .md-button--primary }
+[:material-linkedin: LinkedIn](https://www.linkedin.com/in/biah){ .md-button }
+
+</div>
+
+## Bilal Ahmed
+### Senior Engineering Leader – Payments, Security & SaaS
 Lahore, Pakistan · +92 333 860-6269 · contact@bilal-ahmed.me  
 LinkedIn: https://www.linkedin.com/in/biah  
 
@@ -194,7 +201,3 @@ Blend of **hands-on architecture** (.NET, Python, AWS) with **distributed team l
 
 - **English:** Fluent  
 - **Urdu:** Native  
-
----
-
-**Download (PDF):** [Bilal_Ahmed_CV.pdf](./Bilal_Ahmed_CV.pdf)

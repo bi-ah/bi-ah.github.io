@@ -67,6 +67,10 @@ plugins:
   - search
 
 markdown_extensions:
+  - attr_list
+  - pymdownx.magiclink
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
   - admonition
   - attr_list
   - md_in_html

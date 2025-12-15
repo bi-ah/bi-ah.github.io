@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-<div class="hero hero--bg">
+<div class="hero hero--bg" markdown="1">
   <div class="kicker">Engineering Leadership • Fintech • Security • Compliance-native SaaS</div>
   <div class="headline">Bilal Ahmed</div>
   <div class="subhead">
@@ -12,11 +12,10 @@ hide:
     cybersecurity automation, and regulated SaaS (LIMS).
   </div>
 
-  <div class="hero-cta">
-    [ :material-briefcase: View Work ](work/index.md){ .md-button .md-button--primary }
-    [ :material-book-open-variant: Playbooks ](playbooks/index.md){ .md-button }
-    [ :material-file-account: Download Resume ](resume/index.md){ .md-button }
-    [ :material-email: Contact ](contact/index.md){ .md-button }
+  <div class="home-cta" markdown="1">
+
+  [:material-download: Download CV (PDF)](./resume/Bilal_Ahmed_CV.pdf){ .md-button .md-button--primary }
+
   </div>
 </div>
 
