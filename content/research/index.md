@@ -1,7 +1,9 @@
 ---
 hide:
   - navigation
+  - toc
 ---
+
 
 # Research
 

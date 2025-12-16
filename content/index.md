@@ -1,104 +1,145 @@
 ---
-template: home.html
+title: Home
 hide:
+  - navigation
   - toc
 ---
 
+<div class="home-hero">
+
+<div class="home-hero home-hero--bg" markdown="1">
+<div class="home-hero__inner" markdown="1">
+<div class="home-hero__overlay"></div>
+<div class="home-hero__inner">
+<div class="home-hero__kicker">ENGINEERING LEADERSHIP • FINTECH • SECURITY • COMPLIANCE-NATIVE SAAS</div>
+
+# Bilal Ahmed
+
+<div class="home-hero__subhead">
+I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech, cybersecurity automation, and regulated SaaS (LIMS).
+</div>
+
+<div class="home-hero__cta" markdown="1">
+[:material-briefcase: View Work](work/){ .md-button .md-button--primary }
+[:material-book-open-variant: Playbooks](playbooks/){ .md-button }
+[:material-lightbulb-outline: Insights](insights/){ .md-button }
+[:material-flask-outline: Research](research/){ .md-button }
+[:material-email: Contact](contact/){ .md-button }
+[:material-download: Download CV (PDF)](resume/Bilal_Ahmed_CV.pdf){ .md-button }
+</div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<div class="home-band home-band--light" markdown="1">
+<div class="home-band__inner" markdown="1">
+
 ## Quick start
 
-<div class="home-cards" markdown>
+<div class="home-grid home-grid--2" markdown="1">
 
+<div class="home-card" markdown="1">
 ### :material-briefcase: Start with Work
-
-If you're evaluating me for a role or project, begin with decision-dense case studies: constraints → tradeoffs → execution → outcomes.
-
+If you’re evaluating me for a role or project, begin with decision-dense case studies: constraints → tradeoffs → execution → outcomes.
+<br><br>
 [:material-arrow-right: View Work](work/){ .md-button .md-button--primary }
+</div>
 
-### :material-book-open-variant: Use a Playbook
-
-Reusable guides you can apply immediately — multi-tenant delivery, compliance-by-design, execution discipline, and reliable operations.
-
-[:material-arrow-right: Browse Playbooks](playbooks/){ .md-button }
-
-### :material-flask: Go deeper in Research
-
-Long-form writing under **Research → LIMS / AI** — structured articles with diagrams, references, and repeatable frameworks.
-
+<div class="home-card" markdown="1">
+### :material-flask-outline: Explore Research
+Long-form writing under **Research — LIMS / AI**: structured articles with diagrams, references, and reusable frameworks.
+<br><br>
 [:material-arrow-right: Browse Research](research/){ .md-button }
-
 </div>
-
-<div class="home-band" markdown>
-
-<div class="home-stats" markdown>
-
-### Snapshot
-
-- :material-check-circle-outline: **20+ years** building in fintech, security, and B2B SaaS
-- :material-check-circle-outline: **Compliance-first** delivery mindset (audit trails, validation, evidence)
-- :material-check-circle-outline: **Bias to shipping** — pragmatic systems, measurable outcomes
 
 </div>
 
 </div>
+</div>
+
+<div class="home-band home-band--dark" markdown="1">
+<div class="home-band__inner" markdown="1">
+
+## Snapshot
+
+<div class="home-grid home-grid--3" markdown="1">
+
+<div class="home-stat" markdown="1">
+<div class="home-stat__num">20+</div>
+<div class="home-stat__label">years building payments, security, and B2B SaaS</div>
+</div>
+
+<div class="home-stat" markdown="1">
+<div class="home-stat__num">Audit-ready</div>
+<div class="home-stat__label">controls, traceability, evidence, and delivery rigor</div>
+</div>
+
+<div class="home-stat" markdown="1">
+<div class="home-stat__num">Outcome-driven</div>
+<div class="home-stat__label">pragmatic systems, measurable impact, durable teams</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="home-band home-band--plain" markdown="1">
+<div class="home-band__inner" markdown="1">
 
 ## Everything you’d expect
 
-<div class="home-grid" markdown>
+<div class="home-grid home-grid--2" markdown="1">
 
-### :material-language-markdown: Markdown-first
-
+<div class="home-feature" markdown="1">
+### :material-language-markdown-outline: Markdown-first
 Write in Markdown, keep it in Git, ship with CI.
+</div>
 
+<div class="home-feature" markdown="1">
 ### :material-magnify: Fast search
+Search is always in the header; your home CTA can jump users into it instantly.
+</div>
 
-Search is always available in the header. The home search button opens it instantly.
+<div class="home-feature" markdown="1">
+### :material-shield-check-outline: Security & governance
+Patterns shaped by regulated delivery — controls, auditability, operational rigor.
+</div>
 
-### :material-shield-check: Security & governance
-
-Patterns shaped by real regulated delivery — controls, auditability, and operational rigor.
-
-### :material-rocket-launch: Low maintenance
-
+<div class="home-feature" markdown="1">
+### :material-hammer-wrench: Low maintenance
 No subscriptions. GitHub Pages hosting. Simple, repeatable publishing.
+</div>
 
 </div>
 
----
+</div>
+</div>
+
+<div class="home-band home-band--light" markdown="1">
+<div class="home-band__inner" markdown="1">
 
 ## Latest
 
-<div class="home-cards" markdown>
+<div class="home-grid home-grid--2" markdown="1">
 
-### :material-lightbulb-outline: Insights
+<div class="home-card" markdown="1">
+### :material-book-open-variant: Playbooks
+Practical, opinionated guides you can reuse.
+<br><br>
+[:material-arrow-right: Open Playbooks](playbooks/){ .md-button .md-button--primary }
+</div>
 
-Short, shareable posts designed for LinkedIn.
-
-[:material-arrow-right: See Insights](insights/){ .md-button }
-
-### :material-book-open-variant: Featured Playbook
-
-Start here: a practical, opinionated guide you can reuse.
-
-[:material-arrow-right: Open Playbooks](playbooks/){ .md-button }
-
-### :material-briefcase: Featured Case Study
-
+<div class="home-card" markdown="1">
+### :material-briefcase-outline: Featured case study
 A concrete project story with constraints, tradeoffs, and outcomes.
-
+<br><br>
 [:material-arrow-right: Open Work](work/){ .md-button }
+</div>
 
 </div>
 
----
-
-<div class="home-cta-band" markdown>
-
-### Let’s talk
-
-If you’re hiring or want to collaborate, send a short note with context and your timezone.
-
-[:material-email: Email me](mailto:contact@bilal-ahmed.me){ .md-button .md-button--primary }
-[:material-linkedin: LinkedIn](https://www.linkedin.com/in/biah){ .md-button }
-
+</div>
 </div>

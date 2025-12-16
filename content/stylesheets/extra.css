@@ -1,29 +1,29 @@
-/* Layout */
+/* ==========================================================
+   Global baseline
+   ========================================================== */
+
 .md-content {
   max-width: 1200px;
 }
 
-/* Homepage-only layout: hide sidebars & allow full-bleed hero */
-body[data-md-page="index"], body[data-md-url="index.html"] .md-sidebar--primary,
-body[data-md-page="index"], body[data-md-url="index.html"] .md-sidebar--secondary {
-  display: none;
+/* Prevent accidental horizontal scroll from any lingering 100vw tricks */
+html,
+body {
+  overflow-x: clip;
 }
 
-@media (min-width: 900px) {
-  body[data-md-page="index"], body[data-md-url="index.html"] .md-main__inner {
-    grid-template-columns: 0 1fr;
-  }
+/* HERO BACKGROUND IMAGE (pick the correct path) */
+body[data-md-url="index.html"] .home-hero__bg {
+  background-image: url("../assets/hero.png");
+  /* common if extra.css is in stylesheets/ */
+  /* OR try: url("../assets/images/hero.png") */
+  /* OR try: url("../img/hero.png") */
 }
 
-body[data-md-page="index"], body[data-md-url="index.html"] .md-content {
-  max-width: none;
-}
+/* ==========================================================
+   Typography
+   ========================================================== */
 
-body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
-  padding: 0;
-}
-
-/* Typography */
 .md-typeset h1 {
   letter-spacing: -0.03em;
   font-weight: 750;
@@ -38,7 +38,10 @@ body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
   opacity: 0.92;
 }
 
-/* Buttons */
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
 .md-typeset .md-button {
   margin: 0.25rem 0.6rem 0.25rem 0;
   border-radius: 999px;
@@ -56,9 +59,10 @@ body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
   }
 }
 
-/* ===== Header / Top Nav facelift ===== */
+/* ==========================================================
+   Header / Top nav facelift
+   ========================================================== */
 
-/* Header background (works great with dark hero aesthetic) */
 .md-header {
   background: linear-gradient(90deg,
       rgba(9, 14, 24, 0.94) 0%,
@@ -70,20 +74,16 @@ body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
 }
 
-/* Slightly refine site title */
 .md-header__title .md-header__topic {
   font-weight: 800;
   letter-spacing: -0.02em;
   opacity: 0.98;
 }
 
-/* Logo size + nicer spacing */
 .md-header__button.md-logo img {
   height: 28px;
-  /* adjust if needed */
   width: auto;
   border-radius: 6px;
-  /* makes square logos feel nicer */
 }
 
 .md-header::after {
@@ -96,13 +96,11 @@ body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
       rgba(99, 102, 241, 0.0));
 }
 
-/* Tabs row (Home / Work / Playbooks) */
 .md-tabs {
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Tabs look like premium pills on hover + active underline */
 .md-tabs__link {
   opacity: 0.85;
   font-weight: 650;
@@ -118,571 +116,86 @@ body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
   transform: translateY(-1px);
 }
 
-/* Active tab: subtle highlight + bottom glow */
 .md-tabs__item--active .md-tabs__link {
   opacity: 1;
   background: rgba(99, 102, 241, 0.14);
   box-shadow: inset 0 -2px 0 rgba(99, 102, 241, 0.65);
 }
 
-/* Landing hero */
-.hero {
-  padding: 1.2rem 0 0.5rem 0;
-}
+/* ==========================================================
+   Homepage-only: hide sidebars + single-column grid
+   ========================================================== */
 
-.hero .kicker {
-  font-weight: 600;
-  opacity: 0.75;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.75rem;
-}
-
-.hero .headline {
-  font-size: 2.2rem;
-  line-height: 1.15;
-  margin: 0.3rem 0 0.7rem 0;
-}
-
-.hero .subhead {
-  font-size: 1.05rem;
-  opacity: 0.88;
-  max-width: 52rem;
-}
-
-/* Hero background */
-.hero--bg {
-  position: relative;
-  padding: 3.2rem 2.2rem;
-  border-radius: 18px;
-  overflow: hidden;
-  min-height: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: url("../assets/hero.png") right center / cover no-repeat;
-  /* Ensure readable hero text in both light/dark themes */
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hero--bg a {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hero--bg .kicker {
-  opacity: 0.78;
-}
-
-/* Dark overlay for readability */
-.hero--bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 18, 33, 0.78) 0%,
-    rgba(10, 18, 33, 0.62) 45%,
-    rgba(10, 18, 33, 0.15) 100%
-  );
-}
-
-.hero--bg > * {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-cta {
-  margin-top: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-@media (max-width: 768px) {
-  .hero--bg {
-    padding: 2.2rem 1.3rem;
-    border-radius: 14px;
-    min-height: 320px;
-  }
-}
-
-/* Optional pill CTA style (if you use <a class="cta"> links anywhere) */
-.cta-row {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-/* Resume / page-level actions */
-.page-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-  margin: 0.75rem 0 1.25rem 0;
-}
-
-a.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid rgba(127, 127, 127, 0.25);
-  text-decoration: none !important;
-  font-weight: 650;
-}
-
-a.cta.primary {
-  border: none;
-  background: rgba(99, 102, 241, 0.14);
-}
-
-/* ------------------------------------------------------------
-   Homepage (landing) layout
-   ------------------------------------------------------------ */
-
-/* Full-bleed content on the homepage only */
-body[data-md-page="index"], body[data-md-url="index.html"] .md-main__inner {
-  max-width: none;
-}
-
-body[data-md-page="index"], body[data-md-url="index.html"] .md-content {
-  max-width: none;
-}
-
-body[data-md-page="index"], body[data-md-url="index.html"] .md-content__inner {
-  padding: 0;
-}
-
-body[data-md-page="index"], body[data-md-url="index.html"] .md-header,
-body[data-md-page="index"], body[data-md-url="index.html"] .md-tabs {
-  box-shadow: none;
-}
-
-.home-hero {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: 1.25rem auto 0;
-}
-
-.home-hero__bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  filter: saturate(1.05);
-}
-
-.home-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 18, 33, 0.84) 0%,
-    rgba(10, 18, 33, 0.66) 45%,
-    rgba(10, 18, 33, 0.12) 100%
-  );
-}
-
-.home-hero__inner {
-  position: relative;
-  z-index: 1;
-  padding: 3.2rem 2.2rem;
-  min-height: 420px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.home-hero__kicker {
-  font-size: 0.95rem;
-  letter-spacing: 0.18em;
-  opacity: 0.85;
-  text-transform: uppercase;
-  margin: 0 0 0.75rem 0;
-}
-
-.home-hero__title {
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-  line-height: 1.08;
-  margin: 0;
-}
-
-.home-hero__subtitle {
-  margin: 1rem 0 0 0;
-  max-width: 62ch;
-  font-size: 1.25rem;
-  opacity: 0.9;
-}
-
-.home-hero__actions {
-  margin-top: 1.35rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-/* Make the primary CTA look more “producty” */
-.home-hero__actions .md-button--primary {
-  border-radius: 12px;
-  padding: 0.7rem 1.05rem;
-}
-
-.home-hero__actions .md-button {
-  border-radius: 12px;
-  padding: 0.7rem 1.05rem;
-  backdrop-filter: blur(4px);
-}
-
-.home-content {
-  padding: 2.2rem 1.1rem 0;
-}
-
-.home-section {
-  padding: 1.5rem 0;
-}
-
-.home-section--subtle {
-  padding: 1.75rem 0;
-}
-
-.home-section--band {
-  background: rgba(127, 127, 127, 0.06);
-  border-top: 1px solid rgba(127, 127, 127, 0.12);
-  border-bottom: 1px solid rgba(127, 127, 127, 0.12);
-}
-
-.home-section__title {
-  font-size: 1.4rem;
-  margin: 0 0 0.25rem 0;
-}
-
-.home-section__lead {
-  margin: 0 0 1rem 0;
-  opacity: 0.85;
-}
-
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem 1.25rem;
-}
-
-.home-grid h3 {
-  margin-top: 0;
-}
-
-.home-list {
-  margin: 0.25rem 0 1rem 0;
-}
-
-.home-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@media (max-width: 900px) {
-  .home-hero {
-    margin: 1rem 0.75rem 0;
-    border-radius: 16px;
-  }
-
-  .home-hero__inner {
-    padding: 2.2rem 1.35rem;
-    min-height: 360px;
-  }
-
-  .home-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =============================
-   HOME HERO (landing)
-   ============================= */
-
-/* Safer homepage targeting (Material uses data-md-url) */
 body[data-md-url="index.html"] .md-sidebar--primary,
-body[data-md-url="index.html"] .md-sidebar--secondary { display: none; }
+body[data-md-url="index.html"] .md-sidebar--secondary {
+  display: none !important;
+}
 
 @media (min-width: 900px) {
-  body[data-md-url="index.html"] .md-main__inner { grid-template-columns: 0 1fr; }
+  body[data-md-url="index.html"] .md-main__inner {
+    grid-template-columns: 1fr !important;
+  }
 }
 
-body[data-md-url="index.html"] .md-content { max-width: none; }
-body[data-md-url="index.html"] .md-content__inner { padding: 0; }
+body[data-md-url="index.html"] .md-content {
+  max-width: none !important;
+}
 
+body[data-md-url="index.html"] .md-content__inner {
+  padding: 0 !important;
+}
+
+/* ==========================================================
+   HOME HERO (Option A: under header) — SAFE version (NO 100vw)
+   ========================================================== */
+
+/* This is the key fix: do NOT use 100vw or calc(50% - 50vw) */
 .home-hero {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
-  /* pull under the header */
+
+  /* Pull hero under header (Option A) */
   margin-top: calc(var(--md-header-height) * -1);
-  padding-top: calc(var(--md-header-height) + 3.5rem);
-  padding-bottom: 3.0rem;
+  padding-top: calc(var(--md-header-height) + 3.25rem);
+  padding-bottom: 3.25rem;
+
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 
+/* Background image layer */
 .home-hero__bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: right center;
   transform: scale(1.02);
+  filter: saturate(1.05);
 }
 
+/* Dark overlay for text readability */
 .home-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 18, 33, 0.86) 0%,
-    rgba(10, 18, 33, 0.68) 46%,
-    rgba(10, 18, 33, 0.18) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(10, 18, 33, 0.86) 0%,
+      rgba(10, 18, 33, 0.70) 45%,
+      rgba(10, 18, 33, 0.22) 100%);
 }
 
-.home-hero__inner {
-  position: relative;
-  z-index: 1;
-  color: rgba(255,255,255,0.92);
-}
-
-.home-hero__kicker {
-  font-weight: 650;
-  opacity: 0.78;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.78rem;
-  margin: 0 0 0.6rem 0;
-}
-
-.home-hero__title {
-  color: #fff;
-  font-weight: 850;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  font-size: clamp(2.2rem, 4vw, 3.25rem);
-  margin: 0 0 0.7rem 0;
-}
-
-.home-hero__subtitle {
-  max-width: 64ch;
-  font-size: 1.08rem;
-  opacity: 0.88;
-  margin: 0 0 1.2rem 0;
-}
-
-.home-hero__cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-  margin-top: 1.0rem;
-}
-
-.home-hero__hint {
-  margin: 0.55rem 0 0 0;
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
-.home-hero kbd {
-  border: 1px solid rgba(255,255,255,0.22);
-  border-bottom-color: rgba(255,255,255,0.12);
-  border-radius: 6px;
-  padding: 0.08rem 0.35rem;
-  font-size: 0.82rem;
-}
-
-/* Hero search */
-.home-search {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  border-radius: 999px;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  max-width: 720px;
-}
-
-.home-search__icon {
-  opacity: 0.85;
-}
-
-.home-search__input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: rgba(255,255,255,0.92);
-  font-size: 1.0rem;
-  padding: 0.2rem 0.2rem;
-}
-
-.home-search__input::placeholder { color: rgba(255,255,255,0.65); }
-
-.home-search__button {
-  border: none;
-  border-radius: 999px;
-  padding: 0.45rem 0.8rem;
-  font-weight: 700;
-  cursor: pointer;
-  color: rgba(255,255,255,0.92);
-  background: rgba(99,102,241,0.22);
-}
-
-.home-search:hover {
-  background: rgba(255,255,255,0.10);
-}
-
-.home-content { padding: 0 1rem 2rem 1rem; }
-
-/* Landing sections */
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-}
-
-.home-grid > * {
-  grid-column: span 12;
-  border: 1px solid rgba(127,127,127,0.18);
-  border-radius: 18px;
-  padding: 1.1rem 1.1rem 0.9rem 1.1rem;
-  background: rgba(127,127,127,0.04);
-}
-
-@media (min-width: 900px) {
-  .home-grid > * { grid-column: span 6; }
-}
-
-.home-steps {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-}
-
-.home-steps > * {
-  grid-column: span 12;
-  border: 1px solid rgba(127,127,127,0.18);
-  border-radius: 18px;
-  padding: 1.1rem 1.1rem 0.95rem 1.1rem;
-  background: rgba(127,127,127,0.03);
-}
-
-@media (min-width: 900px) {
-  .home-steps > * { grid-column: span 4; }
-}
-
-/* Stats band (full-bleed) */
-.home-stats {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-  padding: 1.2rem;
-  border-radius: 22px;
-  border: 1px solid rgba(127,127,127,0.18);
-  background: linear-gradient(90deg, rgba(99,102,241,0.10), rgba(0,0,0,0));
-}
-
-.home-stat {
-  grid-column: span 12;
-  padding: 0.4rem 0.2rem;
-}
-
-@media (min-width: 900px) {
-  .home-stat { grid-column: span 4; }
-}
-
-.home-stat__num {
-  font-size: 1.6rem;
-  font-weight: 850;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.15rem;
-}
-
-.home-stat__label { font-weight: 750; opacity: 0.92; }
-.home-stat__desc { opacity: 0.82; margin-top: 0.25rem; }
-
-.home-cards {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-}
-
-.home-cards > * {
-  grid-column: span 12;
-  border: 1px solid rgba(127,127,127,0.18);
-  border-radius: 18px;
-  padding: 1.1rem 1.1rem 0.95rem 1.1rem;
-  background: rgba(127,127,127,0.04);
-}
-
-@media (min-width: 900px) {
-  .home-cards > * { grid-column: span 4; }
-}
-
-.home-cta-band {
-  border-radius: 22px;
-  padding: 1.3rem 1.3rem 1.15rem 1.3rem;
-  border: 1px solid rgba(127,127,127,0.18);
-  background: linear-gradient(90deg, rgba(11,16,32,0.06), rgba(99,102,241,0.08));
-}
-
-@media (max-width: 768px) {
-  .home-hero {
-    padding-top: calc(var(--md-header-height) + 2.5rem);
-    padding-bottom: 2.2rem;
-  }
-  .home-hero__bg { background-position: center; }
-}
-
-/* ==========================================================
-   HOME (Landing) – MkDocs Material-style homepage
-   ========================================================== */
-
-/* Full-bleed hero under the header (Option A) */
-.home-hero {
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-top: calc(var(--md-header-height) * -1);
-  padding-top: calc(var(--md-header-height) + 3.25rem);
-  padding-bottom: 3.25rem;
-  overflow: hidden;
-}
-
-.home-hero__bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
-}
-
-.home-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 18, 33, 0.86) 0%,
-    rgba(10, 18, 33, 0.70) 45%,
-    rgba(10, 18, 33, 0.22) 100%
-  );
-}
-
+/* Inner content */
 .home-hero__inner {
   position: relative;
   z-index: 1;
   color: rgba(255, 255, 255, 0.94);
+  padding: 0 2.2rem;
+  /* keep consistent padding inside hero */
+  max-width: 1200px;
+  /* keeps hero content aligned with site grid */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .home-hero__kicker {
@@ -711,91 +224,111 @@ body[data-md-url="index.html"] .md-content__inner { padding: 0; }
   opacity: 0.90;
 }
 
-.home-hero__search {
-  margin-top: 1.25rem;
-  max-width: 44rem;
-}
-
-.home-hero__searchbtn {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.85rem 1.05rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.10);
-  color: rgba(255, 255, 255, 0.92);
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.home-hero__searchbtn:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.home-hero__searchicon {
-  opacity: 0.95;
-}
-
-.home-hero__searchtext {
-  flex: 1;
-  text-align: left;
-  font-weight: 650;
-}
-
-.home-hero__searchhint {
-  font-size: 0.80rem;
-  opacity: 0.75;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-  padding: 0.15rem 0.55rem;
-}
-
-.home-hero__cta {
+/* CTA row inside hero */
+.home-hero__cta,
+.home-hero__actions {
   margin-top: 1.1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
 }
 
-.home-hero .md-button {
-  border-color: rgba(255, 255, 255, 0.22);
-  color: rgba(255, 255, 255, 0.92);
+.home-hero__actions .md-button,
+.home-hero__cta .md-button {
+  border-radius: 12px;
+  padding: 0.7rem 1.05rem;
+  backdrop-filter: blur(4px);
 }
 
-.home-hero .md-button--primary {
+.home-hero__actions .md-button--primary,
+.home-hero__cta .md-button--primary {
   border: none;
 }
 
-/* Content container under hero */
-.home-content {
-  padding-top: 1.5rem;
+/* Hero search (if you render it) */
+.home-search {
+  margin-top: 1.25rem;
+  max-width: 44rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  border-radius: 999px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Cards grid (used for Quick start + Latest) */
-.home-cards {
-  display: grid;
-  gap: 1rem;
+.home-search:hover {
+  background: rgba(255, 255, 255, 0.10);
 }
 
-@media (min-width: 900px) {
-  .home-cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.home-search__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.home-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.home-search__button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(99, 102, 241, 0.22);
+}
+
+/* Mobile hero adjustments */
+@media (max-width: 768px) {
+  .home-hero {
+    padding-top: calc(var(--md-header-height) + 2.5rem);
+    padding-bottom: 2.2rem;
+    border-radius: 16px;
+  }
+
+  .home-hero__inner {
+    padding: 0 1.25rem;
+  }
+
+  .home-hero__bg {
+    background-position: center;
   }
 }
 
-.home-cards > * {
-  border: 1px solid rgba(127, 127, 127, 0.18);
-  border-radius: 18px;
-  padding: 1.15rem 1.15rem 0.85rem 1.15rem;
-  background: rgba(255, 255, 255, 0.02);
+/* ==========================================================
+   Home sections / grids (optional helpers for your landing)
+   ========================================================== */
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem 1rem;
+  box-sizing: border-box;
 }
 
-/* Feature grid (2x2) */
+.home-section {
+  padding: 1.5rem 0;
+}
+
+.home-section--band {
+  background: rgba(127, 127, 127, 0.06);
+  border-top: 1px solid rgba(127, 127, 127, 0.12);
+  border-bottom: 1px solid rgba(127, 127, 127, 0.12);
+}
+
 .home-grid {
   display: grid;
   gap: 1rem;
@@ -807,55 +340,72 @@ body[data-md-url="index.html"] .md-content__inner { padding: 0; }
   }
 }
 
-.home-grid > * {
+.home-grid>* {
   border: 1px solid rgba(127, 127, 127, 0.14);
   border-radius: 18px;
   padding: 1.05rem;
+  background: rgba(255, 255, 255, 0.02);
 }
 
-/* Full-width band section (Snapshot) */
-.home-band {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 1.25rem 0;
-  background: linear-gradient(90deg, rgba(99, 102, 241, 0.10), rgba(99, 102, 241, 0.02));
-  border-top: 1px solid rgba(127, 127, 127, 0.14);
-  border-bottom: 1px solid rgba(127, 127, 127, 0.14);
+/* ==========================================================
+   Generic “page actions” (if you use it outside home)
+   ========================================================== */
+
+.page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.75rem 0 1.25rem 0;
 }
 
-.home-band .home-stats {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+a.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  text-decoration: none !important;
+  font-weight: 650;
 }
 
-/* CTA band at bottom */
-.home-cta-band {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 2rem 0;
-  background: linear-gradient(90deg, rgba(10, 18, 33, 0.92), rgba(10, 18, 33, 0.82));
-  color: rgba(255, 255, 255, 0.92);
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+a.cta.primary {
+  border: none;
+  background: rgba(99, 102, 241, 0.14);
 }
 
-.home-cta-band > * {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+/* ==========================================================
+   Remove TOC scrollbar on specific sections (CSS-only)
+   (Preferred: frontmatter hide: toc, but this works too)
+   ========================================================== */
 
-.home-cta-band a {
-  color: rgba(255, 255, 255, 0.92);
-}
-
-/* Ensure homepage doesn't show the right TOC gutter */
-body[data-md-page="index"], body[data-md-url="index.html"] {
-  scroll-padding-top: calc(var(--md-header-height) + 1rem);
+/* Playbooks + Insights: hide right TOC sidebar */
+body[data-md-url^="playbooks/"] .md-sidebar--secondary,
+body[data-md-url^="insights/"] .md-sidebar--secondary {
+  display: none !important;
 }
 
 @media (min-width: 900px) {
-  body[data-md-page="index"], body[data-md-url="index.html"] {
-    --md-typeset-scroll-margin-top: calc(var(--md-header-height) + 1rem);
+
+  body[data-md-url^="playbooks/"] .md-main__inner,
+  body[data-md-url^="insights/"] .md-main__inner {
+    grid-template-columns: 1fr 1fr !important;
+    /* left nav + content */
   }
+}
+
+/* ==========================================================
+   IMPORTANT override: if any old rules still exist elsewhere
+   and try to force full-bleed via 100vw, neutralize them
+   ========================================================== */
+
+.home-hero,
+.home-hero__inner {
+  left: auto !important;
+  right: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: none !important;
+  box-sizing: border-box !important;
 }
