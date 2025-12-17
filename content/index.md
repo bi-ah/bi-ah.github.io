@@ -5,33 +5,9 @@ hide:
   - toc
 ---
 
-<div class="home-hero">
-
-<div class="home-hero home-hero--bg" markdown="1">
-<div class="home-hero__inner" markdown="1">
-<div class="home-hero__overlay"></div>
-<div class="home-hero__inner">
-<div class="home-hero__kicker">ENGINEERING LEADERSHIP • FINTECH • SECURITY • COMPLIANCE-NATIVE SAAS</div>
-
-# Bilal Ahmed
-
-<div class="home-hero__subhead">
-I build and lead teams delivering secure, reliable, audit-ready software — across payments/fintech, cybersecurity automation, and regulated SaaS (LIMS).
-</div>
-
-<div class="home-hero__cta" markdown="1">
-[:material-briefcase: View Work](work/){ .md-button .md-button--primary }
-[:material-book-open-variant: Playbooks](playbooks/){ .md-button }
-[:material-lightbulb-outline: Insights](insights/){ .md-button }
-[:material-flask-outline: Research](research/){ .md-button }
-[:material-email: Contact](contact/){ .md-button }
-[:material-download: Download CV (PDF)](resume/Bilal_Ahmed_CV.pdf){ .md-button }
-</div>
-  </div>
-</div>
-
-</div>
-</div>
+<figure markdown>
+  ![ETL Pipeline](../assets/hero.png){ width="100%" }
+</figure>
 
 <div class="home-band home-band--light" markdown="1">
 <div class="home-band__inner" markdown="1">

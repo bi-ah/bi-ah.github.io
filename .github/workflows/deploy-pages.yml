@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build
-        run: mkdocs build --strict --site-dir site
+        run: zensical build --clean -f mkdocs.yml
 
       - uses: actions/upload-pages-artifact@v4
         with:

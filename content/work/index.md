@@ -4,7 +4,6 @@ hide:
   - toc
 ---
 
-
 # Work
 
 Case studies that show constraints, decisions, tradeoffs, execution, and results.
