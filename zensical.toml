@@ -7,12 +7,15 @@ site_author = "Bilal Ahmed"
 docs_dir = "content"
 site_dir = "site"
 
-repo_name = "bi-ah/bi-ah.github.io"
-repo_url = "https://github.com/bi-ah/bi-ah.github.io"
+# repo_name = "bi-ah/bi-ah.github.io"
+# repo_url = "https://github.com/bi-ah/bi-ah.github.io"
+
+use_directory_urls = true
 
 # Assets
 extra_css = ["stylesheets/extra.css"]
 extra_javascript = [
+  "javascripts/theme-variant.js",
   "javascripts/external-links.js",
   "javascripts/home-search.js",
 ]
@@ -50,13 +53,12 @@ nav = [
 ]
 
 [project.theme]
-# "classic" matches Material for MkDocs look & feel (best for compatibility with existing CSS/overrides)
-variant = "classic"
+variant = "modern"
 
 language = "en"
 
-logo = "assets/mark.svg"
-favicon = "assets/favicon.png"
+logo = "assets/logos/mark-dark.svg"
+favicon = "assets/icons/favicon.png"
 
 font.text = "Inter"
 font.code = "JetBrains Mono"
@@ -80,16 +82,16 @@ features = [
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
-primary = "blue grey"   # closest Zensical palette to MkDocs "slate"
-accent = "indigo"
+primary = "red"
+accent = "blue"
 toggle.icon = "material/weather-night"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
-primary = "black"
-accent = "indigo"
+primary = "red"
+accent = "blue"
 toggle.icon = "material/weather-sunny"
 toggle.name = "Switch to light mode"
 

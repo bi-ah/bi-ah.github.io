@@ -5,9 +5,9 @@ hide:
   - toc
 ---
 
-<figure markdown>
-  ![ETL Pipeline](../assets/hero.png){ width="100%" }
-</figure>
+<div>
+  <img src="assets/img/hero/hero.svg" class="hero-img" alt="Bilal Ahmed hero banner" />
+</div>
 
 <div class="home-band home-band--light" markdown="1">
 <div class="home-band__inner" markdown="1">

@@ -1,0 +1,1 @@
+document.documentElement.setAttribute("data-ui-variant", "A"); // A/B/C/D
