@@ -6,7 +6,7 @@ hide:
 ---
 
 <div>
-  <img src="assets/img/hero/hero.svg" class="hero-img" alt="Bilal Ahmed hero banner" />
+  <img src="assets/img/hero/bilalahmed_hero_banner.png" class="hero-img" alt="Bilal Ahmed hero banner" />
 </div>
 
 <div class="home-band home-band--light" markdown="1">

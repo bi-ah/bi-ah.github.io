@@ -8,8 +8,8 @@ hide:
 
 <div class="page-actions" markdown="1">
 
-[:material-download: Download PDF](./Bilal_Ahmed_CV.pdf){ .md-button .md-button--primary }
-[:material-linkedin: LinkedIn](https://www.linkedin.com/in/biah){ .md-button }
+[:material-download: Download PDF](./Bilal_Ahmed_CV.pdf){ .md-button .md-button--primary target="_blank" rel="noopener noreferrer" }
+[:material-linkedin: LinkedIn](https://www.linkedin.com/in/biah){ .md-button target="_blank" rel="noopener noreferrer" }
 
 </div>
 

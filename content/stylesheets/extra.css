@@ -37,6 +37,78 @@ body {
 }
 
 /* ==========================================================
+   About Page - Artistic Headshot
+   ========================================================== */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-headshot-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+.about-headshot-container::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(59, 130, 246, 0.1));
+  border-radius: 24px;
+  z-index: -1;
+  filter: blur(30px);
+}
+
+.about-headshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-headshot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.about-intro h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .about-intro h1 {
+    font-size: 2rem;
+  }
+  
+  .about-lead {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================================================
    Buttons
    ========================================================== */
 
