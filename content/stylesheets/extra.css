@@ -5,17 +5,52 @@
    ========================================================== */
 
 /* ==========================================================
-   Global baseline
+   Global baseline + ONE width variable
    ========================================================== */
 
-.md-content {
-  max-width: 1200px;
+:root {
+  /* ✅ Change ONLY this to control site width everywhere */
+  --layout-width: 1240px;
+  /* try 1320px, 1400px, 1520px */
+
+  /* Content gutters */
+  --content-pad: clamp(1rem, 2.2vw, 2rem);
+
+  /* Header gutters when header is full-width */
+  --header-pad: clamp(1rem, 2.6vw, 2.25rem);
+
+  /* Home hero */
+  --home-hero-top-gap: 0.35rem;
 }
 
-/* Prevent accidental horizontal scroll from any lingering 100vw tricks */
+/* Prevent accidental horizontal scroll */
 html,
 body {
   overflow-x: clip;
+}
+
+/* ==========================================================
+   SITE WIDTH — Single Source of Truth
+   MkDocs Material caps page width via .md-grid.
+   We override that cap using --layout-width.
+   ========================================================== */
+
+/* Global container width */
+.md-grid {
+  max-width: var(--layout-width);
+}
+
+/* Content area width (some pages rely on this too) */
+.md-content {
+  max-width: var(--layout-width);
+}
+
+/* Ensure inner layout uses full available width (prevents “short” look) */
+.md-main__inner {
+  width: 100%;
+  padding-left: var(--content-pad);
+  padding-right: var(--content-pad);
+  box-sizing: border-box;
 }
 
 /* ==========================================================
@@ -37,6 +72,59 @@ body {
 }
 
 /* ==========================================================
+   HEADER LAYOUT FIX (Search to "section 2")
+   - Make header/tabs container full-width (not capped by md-grid)
+   - Keep consistent gutters
+   ========================================================== */
+
+.md-header__inner.md-grid,
+.md-tabs__inner.md-grid {
+  max-width: none;
+  /* full-width header */
+  width: 100%;
+  padding-left: var(--header-pad);
+  padding-right: var(--header-pad);
+}
+
+/* Desktop: push search cluster to far right */
+@media (min-width: 900px) {
+  .md-header__inner .md-search {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Keep header title styling */
+.md-header__title .md-header__topic {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.md-header__button.md-logo img {
+  height: 32px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* Tabs base */
+.md-tabs {
+  background: transparent;
+}
+
+/* Footer base */
+.md-footer,
+.md-footer-nav,
+.md-footer-meta {
+  background: transparent;
+}
+
+/* Ensure header/tabs link contrast */
+.md-header a,
+.md-tabs a {
+  color: inherit !important;
+}
+
+/* ==========================================================
    About Page - Artistic Headshot
    ========================================================== */
 
@@ -46,7 +134,7 @@ body {
   gap: 4rem;
   align-items: center;
   padding: 3rem 0;
-  max-width: 1200px;
+  max-width: var(--layout-width);
   margin: 0 auto;
 }
 
@@ -56,10 +144,12 @@ body {
 }
 
 .about-headshot-container::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -20px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(59, 130, 246, 0.1));
+  background: linear-gradient(135deg,
+      rgba(99, 102, 241, 0.15),
+      rgba(59, 130, 246, 0.1));
   border-radius: 24px;
   z-index: -1;
   filter: blur(30px);
@@ -98,11 +188,11 @@ body {
     gap: 2rem;
     padding: 2rem 1rem;
   }
-  
+
   .about-intro h1 {
     font-size: 2rem;
   }
-  
+
   .about-lead {
     font-size: 1rem;
   }
@@ -130,47 +220,9 @@ body {
 }
 
 /* ==========================================================
-   Header / Tabs / Footer — shared structure
-   ========================================================== */
-
-.md-header__title .md-header__topic {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-.md-header__button.md-logo img {
-  height: 32px;
-  width: auto;
-  border-radius: 6px;
-}
-
-/* Tabs base */
-.md-tabs {
-  background: transparent;
-}
-
-/* Footer base (let variants define bg/border/fg) */
-.md-footer {
-  background: transparent;
-}
-
-.md-footer-nav,
-.md-footer-meta {
-  background: transparent;
-}
-
-/* Desktop: push search to far right */
-@media (min-width: 900px) {
-  .md-header__inner .md-search {
-    margin-right: 0 !important;
-  }
-}
-
-/* ==========================================================
    Variant A — Glass (premium blur + gradients)
    ========================================================== */
 
-/* Shared glass blur */
 html[data-ui-variant="A"] .md-header,
 html[data-ui-variant="A"] .md-tabs {
   backdrop-filter: blur(10px);
@@ -219,12 +271,6 @@ html[data-ui-variant="A"][data-md-color-scheme="slate"] .md-footer {
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* Ensure header/tabs link contrast */
-html[data-ui-variant="A"] .md-header a,
-html[data-ui-variant="A"] .md-tabs a {
-  color: inherit !important;
-}
-
 /* ==========================================================
    Variant B — Shadcn-like minimal (solid, crisp)
    ========================================================== */
@@ -257,11 +303,6 @@ html[data-ui-variant="B"][data-md-color-scheme="slate"] .md-footer {
   color: rgba(255, 255, 255, 0.78);
 }
 
-html[data-ui-variant="B"] .md-header a,
-html[data-ui-variant="B"] .md-tabs a {
-  color: inherit !important;
-}
-
 /* ==========================================================
    Variant C — Brand line (neutral header + accent underline)
    ========================================================== */
@@ -282,7 +323,7 @@ html[data-ui-variant="C"][data-md-color-scheme="slate"] .md-tabs {
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* Accent underline (adjust to match your brand) */
+/* Accent underline */
 html[data-ui-variant="C"] .md-header::after {
   content: "";
   display: block;
@@ -305,11 +346,6 @@ html[data-ui-variant="C"][data-md-color-scheme="slate"] .md-footer {
   color: rgba(255, 255, 255, 0.78);
 }
 
-html[data-ui-variant="C"] .md-header a,
-html[data-ui-variant="C"] .md-tabs a {
-  color: inherit !important;
-}
-
 /* ==========================================================
    Variant D — Always-dark header (same top bar in both modes)
    ========================================================== */
@@ -327,11 +363,6 @@ html[data-ui-variant="D"] .md-tabs {
   color: rgba(255, 255, 255, 0.92);
 }
 
-html[data-ui-variant="D"] .md-header a,
-html[data-ui-variant="D"] .md-tabs a {
-  color: rgba(255, 255, 255, 0.92) !important;
-}
-
 html[data-ui-variant="D"][data-md-color-scheme="default"] .md-footer {
   background: rgba(248, 250, 252, 0.95);
   border-top: 1px solid rgba(15, 23, 42, 0.10);
@@ -345,12 +376,8 @@ html[data-ui-variant="D"][data-md-color-scheme="slate"] .md-footer {
 }
 
 /* ==========================================================
-   HOME HERO
+   HOME HERO (Scoped — do NOT affect all <figure> globally)
    ========================================================== */
-
-:root {
-  --home-hero-top-gap: 0.35rem;
-}
 
 .home-hero-wrap {
   padding-left: 1rem;
@@ -359,8 +386,7 @@ html[data-ui-variant="D"][data-md-color-scheme="slate"] .md-footer {
   padding-top: 0 !important;
 }
 
-/* Full-bleed hero figure */
-figure {
+.home-hero-wrap figure {
   min-height: 50vh;
   position: relative;
   margin: 0;
@@ -370,7 +396,7 @@ figure {
   margin-right: calc(50% - 50vw);
 }
 
-figure img {
+.home-hero-wrap figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -392,7 +418,7 @@ figure img {
    ========================================================== */
 
 .home-content {
-  max-width: 1200px;
+  max-width: var(--layout-width);
   margin: 0 auto;
   padding: 1.5rem 1rem 2rem 1rem;
   box-sizing: border-box;
@@ -468,7 +494,6 @@ body[data-md-url^="insights/"] .md-sidebar--secondary {
   body[data-md-url^="playbooks/"] .md-main__inner,
   body[data-md-url^="insights/"] .md-main__inner {
     grid-template-columns: 1fr 1fr !important;
-    /* left nav + content */
   }
 }
 
@@ -476,12 +501,10 @@ body[data-md-url^="insights/"] .md-sidebar--secondary {
    Theme-aware logo (light vs dark)
    ========================================================== */
 
-/* Default (light) logo */
 .md-header__button.md-logo img {
   content: url("../assets/logos/mark-light.svg");
 }
 
-/* Dark mode logo */
 [data-md-color-scheme="slate"] .md-header__button.md-logo img,
 [data-md-color-scheme="dark"] .md-header__button.md-logo img {
   content: url("../assets/logos/mark-dark.svg");
