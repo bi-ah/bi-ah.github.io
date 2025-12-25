@@ -10,7 +10,7 @@
 
 :root {
   /* ✅ Change ONLY this to control site width everywhere */
-  --layout-width: 1240px;
+  --layout-width: 1260px;
   /* try 1320px, 1400px, 1520px */
 
   /* Content gutters */
@@ -79,14 +79,14 @@ body {
 
 .md-header__inner.md-grid,
 .md-tabs__inner.md-grid {
-  max-width: none;
-  /* full-width header */
+  max-width: var(--layout-width);
+  /* align to your site width */
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  padding-left: var(--header-pad);
-  padding-right: var(--header-pad);
 }
 
-/* Desktop: push search cluster to far right */
+/* Desktop: keep search on the far right within the same width */
 @media (min-width: 900px) {
   .md-header__inner .md-search {
     margin-left: auto !important;
@@ -104,6 +104,10 @@ body {
   height: 32px;
   width: auto;
   border-radius: 6px;
+}
+
+.md-header__source {
+  width: 0px;
 }
 
 /* Tabs base */
