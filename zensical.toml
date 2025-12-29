@@ -43,7 +43,10 @@ nav = [
 
   { Research = [
     { Overview = "research/index.md" },
-    { LIMS = "research/lims/index.md" },
+    {"LIMS" = [
+      "research/lims/index.md",
+      {"Data Integrity & LIMS Compliance" = "research/lims/data-integrity-lims-compliance/index.md"}
+    ]},
     { AI = "research/ai/index.md" },
   ]},
 
