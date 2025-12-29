@@ -573,7 +573,7 @@ body[data-md-url^="insights/"] .md-sidebar--secondary {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
   box-sizing: border-box;
   text-align: left;
   font-family: 'Poppins', 'Inter', 'Manrope', 'DM Sans', 'Work Sans', sans-serif;
@@ -636,6 +636,12 @@ body[data-md-url^="insights/"] .md-sidebar--secondary {
 .banner__content h1,
 .banner__content h2 {
   margin: 0;
+}
+
+.banner__content h3,
+.banner__content h4,
+.banner__content h5 {
+  margin: 0.8em 0 0.4em 0;
 }
 
 .banner__content ul,
