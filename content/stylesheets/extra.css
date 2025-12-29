@@ -513,3 +513,144 @@ body[data-md-url^="insights/"] .md-sidebar--secondary {
 [data-md-color-scheme="dark"] .md-header__button.md-logo img {
   content: url("../assets/logos/mark-dark.svg");
 }
+
+/* ==========================================================
+   Poppins Font for Banner
+   ========================================================== */
+
+/* 600 weight */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins/poppins-semibold-webfont.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 400 weight */
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins/poppins-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================
+   Dynamic Banner Component
+   Usage: Add style="background-image: url('path/to/image.png')" to .banner
+   Content can include headings, subheadings, and lists
+   ========================================================== */
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 0;
+  box-sizing: border-box;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.banner__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  font-family: 'Poppins', 'Inter', 'Manrope', 'DM Sans', 'Work Sans', sans-serif;
+}
+
+/* Light mode - white text */
+[data-md-color-scheme="default"] .banner__content {
+  color: #222222;
+}
+
+[data-md-color-scheme="default"] .banner__content h1,
+[data-md-color-scheme="default"] .banner__content h2,
+[data-md-color-scheme="default"] .banner__content h3,
+[data-md-color-scheme="default"] .banner__content h4,
+[data-md-color-scheme="default"] .banner__content h5 {
+  color: #222222;
+}
+
+/* Dark mode - maintain white text for contrast */
+[data-md-color-scheme="slate"] .banner__content,
+[data-md-color-scheme="dark"] .banner__content {
+  color: #222222;
+}
+
+[data-md-color-scheme="slate"] .banner__content h1,
+[data-md-color-scheme="slate"] .banner__content h2,
+[data-md-color-scheme="slate"] .banner__content h3,
+[data-md-color-scheme="slate"] .banner__content h4,
+[data-md-color-scheme="slate"] .banner__content h5,
+[data-md-color-scheme="dark"] .banner__content h1,
+[data-md-color-scheme="dark"] .banner__content h2,
+[data-md-color-scheme="dark"] .banner__content h3,
+[data-md-color-scheme="dark"] .banner__content h4,
+[data-md-color-scheme="dark"] .banner__content h5 {
+  color: #222222;
+}
+
+/* Responsive banner sizing */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 769px) {
+  .banner {
+    min-height: 400px;
+  }
+  
+  .banner__content h1 {
+    font-size: 2.0rem;
+  }
+  
+  .banner__content h2 {
+    font-size: 1.25rem;
+    opacity: 0.95;
+  }
+}
+
+.banner__content h1,
+.banner__content h2 {
+  margin: 0;
+}
+
+.banner__content ul,
+.banner__content ol {
+  list-style-position: inside;
+  text-align: left;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.banner__content li {
+  opacity: 0.95;
+}
+
+.banner__content p {
+  margin: 1rem 0;
+  opacity: 0.95;
+}

@@ -28,18 +28,18 @@ nav = [
 
   { Work = [
     { Overview = "work/index.md" },
-    { "Case Study Template" = "work/case-study-template.md" },
+#    { "Case Study Template" = "work/case-study-template.md" },
   ]},
 
-  { Playbooks = [
-    { Overview = "playbooks/index.md" },
-    { "Playbook Template" = "playbooks/playbook-template.md" },
-  ]},
+#  { Playbooks = [
+#    { Overview = "playbooks/index.md" },
+#    { "Playbook Template" = "playbooks/playbook-template.md" },
+#  ]},
 
-  { Insights = [
-    { Overview = "insights/index.md" },
-    { "Insight Template" = "insights/insight-template.md" },
-  ]},
+#  { Insights = [
+#    { Overview = "insights/index.md" },
+#    { "Insight Template" = "insights/insight-template.md" },
+#  ]},
 
   { Research = [
     { Overview = "research/index.md" },
