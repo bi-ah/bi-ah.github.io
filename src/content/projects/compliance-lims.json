@@ -1,0 +1,22 @@
+{
+  "title": "Compliance-Native LIMS Platform",
+  "slug": "compliance-lims",
+  "description": "Designed and led development of a laboratory information management system with built-in HIPAA/SOC2 compliance controls.",
+  "fullDescription": "A modern LIMS platform built with compliance as a first-class concern, not an afterthought. Features include automated audit logging, role-based access control, and built-in validation workflows.",
+  "problem": "Existing LIMS solutions treated compliance as an add-on, leading to audit failures and security vulnerabilities.",
+  "constraints": "Must support HIPAA, SOC2, and CLIA requirements. Zero tolerance for data integrity issues.",
+  "approach": "Architected with compliance patterns embedded at the data layer. Built immutable audit logs and automated compliance reporting.",
+  "tradeoffs": "Chose PostgreSQL over NoSQL for ACID compliance. Accepted slower development velocity for comprehensive test coverage.",
+  "execution": "12-month MVP with 5 engineers. Achieved SOC2 Type II certification within 6 months of launch.",
+  "outcomes": "SOC2 Type II certified, serving 15+ laboratory clients, zero compliance findings in external audits.",
+  "role": "CTO & Co-founder",
+  "category": "Compliance/LIMS",
+  "stack": ["React", "Python", "FastAPI", "PostgreSQL", "Kubernetes", "AWS"],
+  "timeline": "2022 - Present",
+  "impact": "SOC2 Type II certified",
+  "whatIdImprove": "Would start with a more modular architecture to support faster feature development post-compliance certification.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 2
+}

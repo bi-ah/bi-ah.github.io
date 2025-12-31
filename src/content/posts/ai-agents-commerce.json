@@ -1,0 +1,11 @@
+{
+  "title": "The Rise of Agentic Commerce: What CTOs Need to Know",
+  "slug": "ai-agents-commerce",
+  "excerpt": "How AI agents are transforming B2B commerce and what it means for payment infrastructure.",
+  "category": "AI/Agents",
+  "readTime": "8 min",
+  "date": "2024-11-28T00:00:00.000Z",
+  "featuredImage": "",
+  "body": "## The Agentic Future\n\nAI agents are moving from assistants to autonomous actors in commerce. This shift has profound implications for how we build payment and commerce infrastructure.\n\n## What Changes?\n\n### Authentication\n\nAgents need their own identity layer:\n- Machine-to-machine auth\n- Delegated authority models\n- Audit trails for agent actions\n\n### Authorization\n\nNew questions emerge:\n- What can an agent buy?\n- What are the spending limits?\n- Who approves exceptions?\n\n### Transaction Patterns\n\nExpect:\n- Higher volume, smaller transactions\n- More complex multi-party flows\n- Real-time negotiation\n\n## Building for Agents\n\n### API-First Design\n\nYour APIs should be:\n- Fully programmatic (no human-dependent flows)\n- Rich in metadata\n- Self-describing\n\n### Guardrails\n\nBuild in:\n- Configurable limits\n- Approval workflows\n- Kill switches\n\n## Conclusion\n\nThe shift to agentic commerce is coming. Start building the infrastructure now.",
+  "published": true
+}

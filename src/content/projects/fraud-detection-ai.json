@@ -1,0 +1,22 @@
+{
+  "title": "AI-Powered Fraud Detection System",
+  "slug": "fraud-detection-ai",
+  "description": "Implemented ML-based fraud detection system reducing chargebacks by 35% while maintaining low false positive rates.",
+  "fullDescription": "A real-time fraud detection system using ensemble ML models to identify suspicious transactions before authorization. Balances fraud prevention with customer friction through adaptive risk scoring.",
+  "problem": "Rule-based fraud systems were either too aggressive (blocking legitimate transactions) or too permissive (high fraud losses).",
+  "constraints": "Must process decisions in under 50ms. Cannot significantly impact conversion rates.",
+  "approach": "Built ensemble model combining gradient boosting with neural networks. Implemented feedback loops for continuous learning.",
+  "tradeoffs": "Chose explainable models over pure accuracy to support regulatory requirements. Accepted some false negatives to minimize customer friction.",
+  "execution": "8-month development with 2 ML engineers and 2 backend engineers. A/B tested extensively before full rollout.",
+  "outcomes": "35% chargeback reduction, 3% improvement in approval rate for good transactions, $1.5M annual fraud savings.",
+  "role": "Engineering Lead",
+  "category": "AI/Agents",
+  "stack": ["Python", "TensorFlow", "Kafka", "Elasticsearch", "Redis", "GCP"],
+  "timeline": "2022 - 2023",
+  "impact": "35% chargeback reduction",
+  "whatIdImprove": "Would invest in better feature engineering pipeline earlier. Would also build more sophisticated model monitoring.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 3
+}

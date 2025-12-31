@@ -1,0 +1,9 @@
+{
+  "pageTitle": "About Me",
+  "pageSubtitle": "20+ years building secure, scalable systems in fintech, payments, and compliance-native SaaS.",
+  "bio": "## Engineering Leader & Builder\n\nI'm Bilal Ahmed—a senior engineering leader with over two decades of experience building mission-critical systems in fintech, payments, security, and healthcare technology.\n\nCurrently, I'm co-founding **SYNVRA**, where we're building compliance-native SaaS infrastructure for the next generation of AI-powered commerce. Previously, I served as CTO at DrsRevenue LLC, scaling medical billing technology to handle $50M+ in annual claims.\n\n## What I Do\n\n- **Payment Systems:** Multi-PSP orchestration, fraud detection, revenue optimization\n- **Security & Compliance:** Zero-trust architecture, HIPAA/SOC2/PCI-DSS compliance\n- **AI & Agents:** Building infrastructure for autonomous commerce agents\n- **Engineering Leadership:** Scaling teams, setting technical direction, mentoring\n\n## Philosophy\n\nI believe the best systems are built with constraints in mind—security, compliance, and scale shouldn't be afterthoughts. They should be architectural decisions made on day one.",
+  "currentRoleTitle": "Current Role",
+  "currentRoleDescription": "Co-founder & Builder at SYNVRA",
+  "experienceSummary": "20+ years in IT, multiple CTO roles",
+  "expertiseAreas": "Fintech, Payments, Security, Compliance, AI"
+}

@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "metric": "15%+", "label": "Approval Rate Lift" },
+    { "metric": "40%", "label": "Decline Reduction" },
+    { "metric": "$50M+", "label": "Claims Processed" },
+    { "metric": "SOC2", "label": "Type II Certified" },
+    { "metric": "20+", "label": "Years Experience" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Payment Orchestration Platform",
+  "slug": "payment-orchestration",
+  "description": "Built a multi-PSP payment routing engine with intelligent retry logic, achieving 15%+ approval rate lift and 40% decline reduction.",
+  "fullDescription": "A comprehensive payment orchestration layer that sits between merchants and multiple payment service providers (PSPs). The system intelligently routes transactions based on success probability, cost optimization, and issuer-specific patterns.",
+  "problem": "Enterprise merchants were experiencing high decline rates and suboptimal approval rates due to reliance on single PSPs.",
+  "constraints": "Had to maintain sub-100ms latency, support 50+ PSP integrations, and ensure PCI-DSS Level 1 compliance.",
+  "approach": "Built a routing engine with ML-based decline prediction, implemented cascading retry logic, and created a unified API layer.",
+  "tradeoffs": "Chose eventual consistency for analytics to prioritize transaction speed. Accepted higher infrastructure costs for redundancy.",
+  "execution": "6-month development cycle with 3 engineers. Phased rollout starting with low-risk transaction types.",
+  "outcomes": "15%+ approval rate lift, 40% decline reduction, $2M+ additional revenue captured annually for initial clients.",
+  "role": "Technical Lead & Architect",
+  "category": "Payments",
+  "stack": ["Node.js", "PostgreSQL", "Redis", "AWS Lambda", "Terraform"],
+  "timeline": "2023 - Present",
+  "impact": "15%+ approval rate lift",
+  "whatIdImprove": "Would invest more in real-time monitoring dashboards earlier. Would also build a self-service configuration UI for routing rules.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 1
+}

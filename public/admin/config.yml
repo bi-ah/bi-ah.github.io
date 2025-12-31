@@ -1,0 +1,159 @@
+backend:
+  name: github
+  repo: bi-ah/bi-ah.github.io  # UPDATE THIS to your actual repo
+  branch: main
+  base_url: https://api.netlify.com  # For OAuth, or use Netlify Identity
+  auth_endpoint: auth
+
+# When using GitHub pages, use the following instead:
+# backend:
+#   name: git-gateway
+#   branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Logo for admin UI
+logo_url: "/favicon.ico"
+
+# Site URL for preview
+site_url: https://bi-ah.github.io
+
+# Slug settings
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  # ===== SITE SETTINGS =====
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "General Settings"
+        name: "site"
+        file: "src/content/settings/site.json"
+        fields:
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Site Description", name: "siteDescription", widget: "text" }
+          - { label: "Author Name", name: "authorName", widget: "string" }
+          - { label: "Author Title", name: "authorTitle", widget: "string" }
+          - { label: "Author Tagline", name: "authorTagline", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
+          - { label: "GitHub URL", name: "githubUrl", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsappNumber", widget: "string", required: false }
+          - { label: "Available for Work", name: "availableForWork", widget: "boolean", default: true }
+          - { label: "Availability Message", name: "availabilityMessage", widget: "string" }
+
+      - label: "Hero Section"
+        name: "hero"
+        file: "src/content/settings/hero.json"
+        fields:
+          - { label: "Headline", name: "headline", widget: "text" }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Primary CTA Text", name: "primaryCtaText", widget: "string" }
+          - { label: "Primary CTA Link", name: "primaryCtaLink", widget: "string" }
+          - { label: "Secondary CTA Text", name: "secondaryCtaText", widget: "string" }
+          - { label: "Secondary CTA Link", name: "secondaryCtaLink", widget: "string" }
+
+      - label: "About Page"
+        name: "about"
+        file: "src/content/settings/about.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "text" }
+          - { label: "Bio (Markdown)", name: "bio", widget: "markdown" }
+          - { label: "Current Role Title", name: "currentRoleTitle", widget: "string" }
+          - { label: "Current Role Description", name: "currentRoleDescription", widget: "string" }
+          - { label: "Experience Summary", name: "experienceSummary", widget: "string" }
+          - { label: "Expertise Areas", name: "expertiseAreas", widget: "string" }
+
+      - label: "Resume Page"
+        name: "resume"
+        file: "src/content/settings/resume.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "string" }
+          - { label: "Executive Summary", name: "executiveSummary", widget: "text" }
+          - { label: "Resume PDF", name: "resumePdf", widget: "file", required: false }
+          - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
+
+      - label: "Proof Strip (Home Page)"
+        name: "proofStrip"
+        file: "src/content/settings/proof-strip.json"
+        fields:
+          - label: "Proof Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Metric", name: "metric", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+  # ===== BLOG POSTS =====
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "slug"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Category", name: "category", widget: "select", options: ["Payments", "Security", "AI/Agents", "Leadership", "Compliance"] }
+      - { label: "Read Time", name: "readTime", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Body (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+
+  # ===== PROJECTS =====
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "slug"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Full Description", name: "fullDescription", widget: "markdown" }
+      - { label: "Problem", name: "problem", widget: "text" }
+      - { label: "Constraints", name: "constraints", widget: "text" }
+      - { label: "Approach", name: "approach", widget: "text" }
+      - { label: "Tradeoffs", name: "tradeoffs", widget: "text" }
+      - { label: "Execution", name: "execution", widget: "text" }
+      - { label: "Outcomes", name: "outcomes", widget: "text" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Payments", "Security", "Compliance/LIMS", "AI/Agents", "Leadership"] }
+      - label: "Tech Stack"
+        name: "stack"
+        widget: "list"
+        field: { label: "Technology", name: "tech", widget: "string" }
+      - { label: "Timeline", name: "timeline", widget: "string" }
+      - { label: "Impact Metric", name: "impact", widget: "string" }
+      - { label: "What I'd Improve", name: "whatIdImprove", widget: "text" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "GitHub Link", name: "githubLink", widget: "string", required: false }
+      - { label: "Demo Link", name: "demoLink", widget: "string", required: false }
+      - { label: "Order", name: "order", widget: "number", default: 0, required: false }
+
+  # ===== PAGES (Custom) =====
+  - name: "pages"
+    label: "Custom Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "slug"
+    extension: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body (Markdown)", name: "body", widget: "markdown" }
+      - { label: "Show in Navigation", name: "showInNav", widget: "boolean", default: false }
+      - { label: "Nav Order", name: "navOrder", widget: "number", default: 99 }

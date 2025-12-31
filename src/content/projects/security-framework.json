@@ -1,0 +1,22 @@
+{
+  "title": "Zero-Trust Security Framework",
+  "slug": "security-framework",
+  "description": "Architected organization-wide zero-trust security implementation with identity-based access controls.",
+  "fullDescription": "A comprehensive zero-trust architecture implementation covering network segmentation, identity verification, and continuous authorization for all system access.",
+  "problem": "Traditional perimeter-based security was insufficient for distributed teams and cloud-native infrastructure.",
+  "constraints": "Must not significantly impact developer productivity. Required support for legacy systems.",
+  "approach": "Implemented identity-aware proxy, service mesh with mTLS, and just-in-time access provisioning.",
+  "tradeoffs": "Accepted higher operational complexity for improved security posture. Chose gradual rollout over big-bang migration.",
+  "execution": "18-month implementation across 200+ services. Phased approach starting with highest-risk systems.",
+  "outcomes": "Zero security incidents post-implementation, 90% reduction in standing privileges, passed all external security audits.",
+  "role": "Security Architect",
+  "category": "Security",
+  "stack": ["AWS", "Terraform", "HashiCorp Vault", "Okta", "Istio"],
+  "timeline": "2021 - 2022",
+  "impact": "Zero security incidents",
+  "whatIdImprove": "Would have built better developer documentation and self-service tools earlier.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 5
+}
