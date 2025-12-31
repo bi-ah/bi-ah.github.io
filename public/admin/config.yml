@@ -1,14 +1,17 @@
 backend:
   name: github
-  repo: bi-ah/bi-ah.github.io  # UPDATE THIS to your actual repo
+  repo: bi-ah/bi-ah.github.io
   branch: main
-  base_url: https://api.netlify.com  # For OAuth, or use Netlify Identity
   auth_endpoint: auth
+  # Optional: for local development with Netlify CLI
+  # base_url: http://localhost:8081
 
-# When using GitHub pages, use the following instead:
+# For using git-gateway with Netlify Identity, use:
 # backend:
 #   name: git-gateway
 #   branch: main
+
+publish_mode: editorial_workflow
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
