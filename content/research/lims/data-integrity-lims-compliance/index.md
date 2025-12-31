@@ -263,8 +263,3 @@ A modern LIMS helps labs:
 - protect data with security controls and audit-ready governance
 
 If your lab is scaling, modernizing, or preparing for stricter scrutiny, investing in LIMS isn’t just operational—it’s strategic.
-
----
-
-**Want help tailoring this page to your exact LIMS workflows (QC, stability, microbiology, R&D, calibration, sample logistics)?**  
-Reach out via the contact page on **bilal-ahmed.me** and I’ll help you adapt it for your lab’s compliance scope.
