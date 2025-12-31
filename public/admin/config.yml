@@ -2,8 +2,8 @@ backend:
   name: github
   repo: bi-ah/bi-ah.github.io
   branch: main
-  base_url: https://bilal-ahmed.me
-  auth_endpoint: api/auth
+  auth_type: pkce
+  app_id: Ov23liOBJi4I72R1mIPM
 
 publish_mode: editorial_workflow
 
