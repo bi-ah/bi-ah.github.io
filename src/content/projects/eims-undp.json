@@ -1,0 +1,22 @@
+{
+  "title": "Environmental Information Management System (EIMS)",
+  "slug": "eims-undp",
+  "description": "Designed end-to-end architecture for UNDP/GEF Environmental Information Management System supporting Pakistan's Ministry of Climate Change.",
+  "fullDescription": "A centralized platform for environmental data analytics developed in collaboration with UNDP, GEF, and Pakistan's Ministry of Climate Change. The system aggregates multi-source environmental data to support evidence-based policy decisions for climate resilience and sustainable development.",
+  "problem": "Environmental data was siloed across agencies and formats, making it difficult for policymakers to access actionable insights for climate change mitigation.",
+  "constraints": "Must support multiple stakeholder groups with varying technical capabilities. Required data import from diverse external sources with different formats and quality levels.",
+  "approach": "Designed comprehensive SRS, database schema, and system architecture. Built data import/export modules, role-based dashboards, and automated aggregation pipelines.",
+  "tradeoffs": "Chose pragmatic technology stack (MySQL, web-based portal) for maintainability by government teams. Prioritized data accessibility over advanced analytics features.",
+  "execution": "3-month fixed-term contract. Delivered complete system design, functional requirements, and documentation for multi-stakeholder implementation.",
+  "outcomes": "Enhanced accessibility to critical environmental information. Supported data-driven policy decisions aligned with UN Sustainable Development Goals (SDGs).",
+  "role": "System Architect",
+  "category": "Public Sector",
+  "stack": ["MySQL", "Web APIs", "Data Import/Export", "Role-Based Dashboards", "Mobile Apps"],
+  "timeline": "Aug 2020 - Dec 2020",
+  "impact": "Climate policy support",
+  "whatIdImprove": "Would have pushed for more modern cloud infrastructure to support future scalability.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 6
+}

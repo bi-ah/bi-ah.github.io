@@ -1,0 +1,22 @@
+{
+  "title": "Verifi Order Insight Integration",
+  "slug": "verifi-order-insight",
+  "description": "Implemented Visa's Verifi Order Insight solution enabling merchants to share transaction details with issuers, increasing dispute win rates by 15%.",
+  "fullDescription": "Integration of Visa's Verifi Order Insight service that allows merchants to share detailed transaction information with issuers in real-time during the dispute inquiry process, deflecting chargebacks before they escalate.",
+  "problem": "Merchants were losing friendly fraud disputes due to inability to provide transaction evidence to issuers at the point of inquiry.",
+  "constraints": "Required real-time response to issuer inquiries. Must integrate with existing merchant transaction systems and Verifi's API specifications.",
+  "approach": "Built integration layer between merchant transaction data and Verifi Order Insight API. Implemented automated evidence enrichment and real-time response handling.",
+  "tradeoffs": "Chose comprehensive data enrichment over minimal responses to maximize dispute deflection. Accepted integration complexity for better merchant outcomes.",
+  "execution": "Delivered as part of Pagos chargeback prevention offering. Coordinated with Visa and merchant technical teams.",
+  "outcomes": "Increased merchant chances of winning friendly fraud disputes by 15%. Strengthened merchants' evidence for dispute representment.",
+  "role": "Senior Engineering Manager",
+  "category": "Payments",
+  "stack": [".NET Framework", "AWS RDS", "AWS SQS", "AWS ECS", "Verifi API", "Datadog"],
+  "timeline": "2023 - 2025",
+  "impact": "15% dispute win rate improvement",
+  "whatIdImprove": "Would build more merchant self-service configuration for evidence selection.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 8
+}

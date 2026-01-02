@@ -1,0 +1,22 @@
+{
+  "title": "AI-Powered SOAR Platform",
+  "slug": "ai-soar-platform",
+  "description": "Led design and delivery of an AI-powered Security Orchestration, Automation, and Response (SOAR) platform integrating SIEM telemetry and automated incident response.",
+  "fullDescription": "An enterprise-grade SOAR platform combining SIEM data streams, threat intelligence feeds, and AI-driven analytics to automate security operations. The system provides real-time threat detection, automated playbook execution, and coordinated incident response.",
+  "problem": "Security teams were overwhelmed by alert fatigue, false positives, and the sheer volume of threats. Manual incident response couldn't scale with the frequency of automated attacks.",
+  "constraints": "Required integration with heterogeneous SIEM solutions and data sources. Must reduce response time while maintaining accuracy and minimizing false positives.",
+  "approach": "Designed an AI layer that sits atop SIEM data repositories, applying machine learning for threat classification and automated response orchestration. Built playbooks for common threat patterns.",
+  "tradeoffs": "Chose explainable AI models over black-box approaches to support security analyst review. Accepted gradual automation rollout to build operator confidence.",
+  "execution": "12-month engagement leading design and delivery. Collaborated on patent documentation for AI-driven SOAR innovations.",
+  "outcomes": "Enhanced real-time threat detection capabilities and reduced incident response times. Contributed to patented security frameworks for automated threat response.",
+  "role": "Senior Technical Lead",
+  "category": "Security",
+  "stack": [".NET Framework", "Python", "Elasticsearch", "AWS", "AI/ML", "SIEM", "Datadog"],
+  "timeline": "Mar 2020 - Apr 2021",
+  "impact": "Patent contributions for SOAR",
+  "whatIdImprove": "Would have invested more in operator training and change management for security teams transitioning to automated workflows.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 4
+}

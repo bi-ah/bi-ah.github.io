@@ -1,0 +1,22 @@
+{
+  "title": "Account Updater Service",
+  "slug": "account-updater",
+  "description": "Designed unified Account Updater service integrating Visa VAU, Mastercard ABU/RTAU, Discover GAU, and Amex Cardrefresher, reducing recurring payment declines by ~33%.",
+  "fullDescription": "An automated account updater platform that synchronizes card-on-file data with issuer records across all major card networks. The system handles batch and real-time updates, ensuring merchants always have current card credentials for recurring billing.",
+  "problem": "Merchants handling recurring transactions were experiencing high decline rates due to expired, replaced, or updated card credentials that weren't being communicated to their systems.",
+  "constraints": "Required integration with proprietary protocols from each card network (Visa VAU, Mastercard ABU/RTAU, Discover GAU, Amex Cardrefresher). Must maintain PCI-DSS compliance throughout the update lifecycle.",
+  "approach": "Built a unified abstraction layer over the four network-specific protocols. Implemented batch processing with intelligent retry logic and real-time update webhooks for merchants.",
+  "tradeoffs": "Chose batch-first approach for reliability, adding real-time (RTAU) as an enhancement. Accepted higher storage costs to maintain update history for dispute support.",
+  "execution": "Phased implementation starting with Visa VAU, then adding Mastercard ABU/RTAU, Discover GAU, and Amex Cardrefresher. Weekly deployments with comprehensive testing gates.",
+  "outcomes": "Reduced recurring payment declines by approximately 33%. Enabled seamless payment processing for high-volume merchants supporting millions of monthly transactions globally.",
+  "role": "Senior Engineering Manager",
+  "category": "Payments",
+  "stack": [".NET Framework", "AWS RDS", "AWS SQS", "AWS ECS", "SQL", "AES Encryption", "Datadog"],
+  "timeline": "2021 - 2025",
+  "impact": "~33% decline reduction",
+  "whatIdImprove": "Would add more proactive alerting for issuer-side delays and build merchant self-service dashboards earlier.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 2
+}

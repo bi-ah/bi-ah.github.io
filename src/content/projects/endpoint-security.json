@@ -1,0 +1,22 @@
+{
+  "title": "Endpoint Security & Ransomware Defense",
+  "slug": "endpoint-security",
+  "description": "Led architecture and development of endpoint protection and data security products with focus on ransomware defense and secure data storage.",
+  "fullDescription": "A comprehensive endpoint security suite providing real-time protection against ransomware, keyloggers, and malicious threats. Features proactive detection algorithms, secure data encryption, and automated threat remediation.",
+  "problem": "Organizations faced evolving ransomware threats that traditional antivirus couldn't address. Endpoint security needed to move from signature-based to behavior-based detection.",
+  "constraints": "Must operate with minimal system overhead. Required support for diverse Windows environments while maintaining detection accuracy.",
+  "approach": "Built behavior-based detection algorithms combined with signature analysis. Implemented secure data storage with encryption and sandboxed analysis for suspicious files.",
+  "tradeoffs": "Chose lower false-positive rates over aggressive blocking to minimize user disruption. Accepted some detection latency for improved accuracy.",
+  "execution": "Multi-year development across SE-OPS product line. Built and evolved security orchestration workflows in collaboration with product, compliance, and operations teams.",
+  "outcomes": "Protected client systems from emerging ransomware threats. Delivered reliable, hardened agents emphasizing performance, maintainability, and secure-by-design patterns.",
+  "role": "Technical Lead / Lead Software Architect",
+  "category": "Security",
+  "stack": ["C++", ".NET Framework", "Python", "Windows Security APIs", "Cuckoo Sandbox", "VirusTotal"],
+  "timeline": "2011 - 2020",
+  "impact": "Enterprise ransomware defense",
+  "whatIdImprove": "Would have built more extensive telemetry and threat intelligence sharing capabilities earlier.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 5
+}

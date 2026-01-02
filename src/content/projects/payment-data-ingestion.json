@@ -1,0 +1,22 @@
+{
+  "title": "Payment Data Ingestion Platform",
+  "slug": "payment-data-ingestion",
+  "description": "Built real-time payment data ingestion pipelines processing millions of transactions monthly, powering analytics, risk dashboards, and merchant insights.",
+  "fullDescription": "A high-volume data ingestion platform that processes payment transaction data from global PSPs in near real-time. The system powers analytics dashboards, risk scoring, and actionable merchant insights.",
+  "problem": "Merchants lacked visibility into transaction performance across PSPs. Data was fragmented and delayed, preventing timely decision-making on approval optimization.",
+  "constraints": "Must handle millions of transactions monthly with low latency. Required integration with diverse PSP data formats and guarantee data consistency for financial reporting.",
+  "approach": "Built event-driven ingestion pipelines using AWS Lambda, Kafka, and SQS. Implemented data lake architecture with Athena for ad-hoc queries and Redshift for structured analytics.",
+  "tradeoffs": "Chose eventual consistency for analytics to prioritize ingestion throughput. Accepted higher storage costs for raw data retention supporting compliance requirements.",
+  "execution": "Iterative development as part of Pagos platform. Led architecture decisions, code reviews, and production support for reliability.",
+  "outcomes": "Enabled near real-time reporting and operational decision-making for international merchants. Powered risk dashboards and merchant-facing insights.",
+  "role": "Technical Lead / Senior Engineering Manager",
+  "category": "Payments",
+  "stack": ["Python", ".NET", "AWS Lambda", "Kafka", "SQS", "Athena", "RDS", "Redshift", "S3", "Datadog"],
+  "timeline": "2021 - 2025",
+  "impact": "Millions of transactions/month",
+  "whatIdImprove": "Would have invested in self-service data exploration tools for merchants earlier.",
+  "featuredImage": "",
+  "githubLink": "",
+  "demoLink": "",
+  "order": 7
+}
