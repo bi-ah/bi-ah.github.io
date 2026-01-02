@@ -3,11 +3,11 @@ import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contacts = [
-  { icon: Mail, label: "Email", value: "bilal@synvra.com", href: "mailto:bilal@synvra.com" },
+  { icon: Mail, label: "Email", value: "contact@bilal-ahmed.me", href: "mailto:contact@bilal-ahmed.me" },
   { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/bi-ah", href: "https://linkedin.com/in/bi-ah" },
   { icon: Github, label: "GitHub", value: "github.com/bi-ah", href: "https://github.com/bi-ah" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+1 (817) 701-1602", href: "https://wa.me/18177011602" },
-  { icon: Phone, label: "Phone", value: "+1 (817) 701-1602", href: "tel:+18177011602" },
+  { icon: MessageCircle, label: "WhatsApp", value: "+92 (333) 860-6269", href: "https://wa.me/923338606269" },
+  { icon: Phone, label: "Phone", value: "+92 (333) 860-6269", href: "tel:+923338606269" },
 ];
 
 export default function Contact() {
