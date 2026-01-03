@@ -4,13 +4,14 @@ import { ExternalLink, Filter } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { getAllProjects, getProjectCategories } from "@/lib/content";
+import { getAllProjects, getProjectCategories, getProjectsPageSettings } from "@/lib/content";
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const projects = useMemo(() => getAllProjects(), []);
   const categories = useMemo(() => getProjectCategories(), []);
+  const pageSettings = useMemo(() => getProjectsPageSettings(), []);
 
   const filteredProjects = useMemo(() => {
     return activeCategory === "All"
@@ -24,12 +25,10 @@ export default function Projects() {
       <section className="bg-primary py-20">
         <div className="container-wide">
           <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">
-            Projects
+            {pageSettings.pageTitle}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/70">
-            A collection of engineering projects spanning payments, security,
-            compliance, and AI. Each project represents real challenges solved
-            with measurable outcomes.
+            {pageSettings.pageSubtitle}
           </p>
         </div>
       </section>

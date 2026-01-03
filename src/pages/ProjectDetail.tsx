@@ -2,16 +2,19 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, ExternalLink, Github, Calendar, User } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { getProjectBySlug, getAllProjects, type Project } from "@/lib/content";
+import { getProjectBySlug, getAllProjects, getSEOSettings, type Project } from "@/lib/content";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = getProjectBySlug(id || "");
   const allProjects = getAllProjects();
+  const seo = getSEOSettings();
 
   if (!project) {
     return (
       <Layout>
+        <SEOHead title="Project Not Found" />
         <section className="section-padding">
           <div className="container-narrow text-center">
             <h1 className="font-display text-3xl font-bold">Project Not Found</h1>
@@ -31,6 +34,12 @@ export default function ProjectDetail() {
 
   return (
     <Layout>
+      <SEOHead 
+        title={project.title}
+        description={project.description}
+        url={`${seo.siteUrl}/projects/${project.slug}`}
+        type="article"
+      />
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-wide">

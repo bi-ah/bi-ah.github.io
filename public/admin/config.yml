@@ -41,6 +41,19 @@ collections:
           - { label: "Available for Work", name: "availableForWork", widget: "boolean", default: true }
           - { label: "Availability Message", name: "availabilityMessage", widget: "string" }
 
+      - label: "SEO Settings"
+        name: "seo"
+        file: "src/content/settings/seo.json"
+        fields:
+          - { label: "Site Title (SEO)", name: "siteTitle", widget: "string", hint: "Title shown in browser tab and search results" }
+          - { label: "Meta Description", name: "siteDescription", widget: "text", hint: "Description shown in search results (max 160 chars)" }
+          - { label: "Keywords", name: "keywords", widget: "string", hint: "Comma-separated keywords for SEO" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "Site URL", name: "siteUrl", widget: "string", hint: "Full URL including https://" }
+          - { label: "OG Image", name: "ogImage", widget: "image", hint: "Social sharing image (1200x630px recommended)" }
+          - { label: "Twitter Handle", name: "twitterHandle", widget: "string", required: false, hint: "e.g. @username" }
+          - { label: "Theme Color", name: "themeColor", widget: "string", hint: "Browser theme color (hex format)" }
+
       - label: "Hero Section"
         name: "hero"
         file: "src/content/settings/hero.json"
@@ -73,6 +86,52 @@ collections:
           - { label: "Executive Summary", name: "executiveSummary", widget: "text" }
           - { label: "Resume PDF", name: "resumePdf", widget: "file", required: false }
           - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "src/content/settings/contact.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Subtitle", name: "ctaSubtitle", widget: "text" }
+          - { label: "CTA Button Text", name: "ctaButtonText", widget: "string" }
+
+      - label: "Blog Page"
+        name: "blog"
+        file: "src/content/settings/blog.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "text" }
+
+      - label: "Projects Page"
+        name: "projects"
+        file: "src/content/settings/projects.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "text" }
+
+      - label: "Work Page"
+        name: "work"
+        file: "src/content/settings/work.json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Subtitle", name: "pageSubtitle", widget: "text" }
+          - label: "Case Studies"
+            name: "caseStudies"
+            widget: "list"
+            fields:
+              - { label: "Project Slug", name: "projectSlug", widget: "string", hint: "Must match an existing project slug" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Result", name: "result", widget: "string" }
+
+      - label: "404 Page"
+        name: "notfound"
+        file: "src/content/settings/notfound.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Message", name: "message", widget: "string" }
+          - { label: "Link Text", name: "linkText", widget: "string" }
 
       - label: "Proof Strip (Home Page)"
         name: "proofStrip"

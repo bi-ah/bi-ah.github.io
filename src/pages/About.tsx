@@ -5,12 +5,17 @@ import { Button } from "@/components/ui/button";
 import { getAboutSettings } from "@/lib/content";
 import ReactMarkdown from "react-markdown";
 import headshot from "@/assets/headshot.png";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function About() {
   const settings = getAboutSettings();
 
   return (
     <Layout>
+      <SEOHead 
+        title={settings.pageTitle}
+        description={settings.pageSubtitle}
+      />
       <section className="bg-primary py-20">
         <div className="container-wide">
           <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">

@@ -4,7 +4,7 @@ import { Search, Calendar, Clock } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { getAllPosts, getPostCategories, formatDate, type BlogPost } from "@/lib/content";
+import { getAllPosts, getPostCategories, formatDate, getBlogPageSettings, type BlogPost } from "@/lib/content";
 
 export default function Blog() {
   const [search, setSearch] = useState("");
@@ -12,6 +12,7 @@ export default function Blog() {
 
   const posts = useMemo(() => getAllPosts(), []);
   const categories = useMemo(() => getPostCategories(), []);
+  const pageSettings = useMemo(() => getBlogPageSettings(), []);
 
   const filtered = useMemo(() => {
     return posts.filter((post) => {
@@ -26,9 +27,9 @@ export default function Blog() {
     <Layout>
       <section className="bg-primary py-20">
         <div className="container-wide">
-          <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">Blog</h1>
+          <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">{pageSettings.pageTitle}</h1>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/70">
-            Insights on engineering leadership, fintech, security, and AI.
+            {pageSettings.pageSubtitle}
           </p>
         </div>
       </section>

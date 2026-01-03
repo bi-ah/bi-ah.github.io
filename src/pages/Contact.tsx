@@ -1,22 +1,26 @@
 import { Layout } from "@/components/layout/Layout";
 import { Mail, Linkedin, Github, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const contacts = [
-  { icon: Mail, label: "Email", value: "contact@bilal-ahmed.me", href: "mailto:contact@bilal-ahmed.me" },
-  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/bi-ah", href: "https://linkedin.com/in/bi-ah" },
-  { icon: Github, label: "GitHub", value: "github.com/bi-ah", href: "https://github.com/bi-ah" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+92 (333) 860-6269", href: "https://wa.me/923338606269" },
-  { icon: Phone, label: "Phone", value: "+92 (333) 860-6269", href: "tel:+923338606269" },
-];
+import { getContactSettings, getSiteSettings } from "@/lib/content";
 
 export default function Contact() {
+  const contactSettings = getContactSettings();
+  const siteSettings = getSiteSettings();
+
+  const contacts = [
+    { icon: Mail, label: "Email", value: siteSettings.email, href: `mailto:${siteSettings.email}` },
+    { icon: Linkedin, label: "LinkedIn", value: siteSettings.linkedinUrl.replace("https://", ""), href: siteSettings.linkedinUrl },
+    { icon: Github, label: "GitHub", value: siteSettings.githubUrl.replace("https://", ""), href: siteSettings.githubUrl },
+    ...(siteSettings.whatsappNumber ? [{ icon: MessageCircle, label: "WhatsApp", value: siteSettings.whatsappNumber, href: `https://wa.me/${siteSettings.whatsappNumber.replace(/\D/g, '')}` }] : []),
+    ...(siteSettings.whatsappNumber ? [{ icon: Phone, label: "Phone", value: siteSettings.whatsappNumber, href: `tel:${siteSettings.whatsappNumber}` }] : []),
+  ];
+
   return (
     <Layout>
       <section className="bg-primary py-20">
         <div className="container-wide">
-          <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">Get in Touch</h1>
-          <p className="mt-4 max-w-2xl text-lg text-primary-foreground/70">Open to consulting, advisory roles, and building interesting things together.</p>
+          <h1 className="font-display text-4xl font-bold text-primary-foreground md:text-5xl">{contactSettings.pageTitle}</h1>
+          <p className="mt-4 max-w-2xl text-lg text-primary-foreground/70">{contactSettings.pageSubtitle}</p>
         </div>
       </section>
       <section className="section-padding">
@@ -35,9 +39,9 @@ export default function Contact() {
             ))}
           </div>
           <div className="mt-16 text-center">
-            <h2 className="font-display text-2xl font-bold">Prefer a Quick Message?</h2>
-            <p className="mt-2 text-muted-foreground">Email is the fastest way to reach me for professional inquiries.</p>
-            <a href="mailto:bilal@synvra.com"><Button size="lg" className="mt-6 gap-2"><Mail className="h-4 w-4" />Send an Email</Button></a>
+            <h2 className="font-display text-2xl font-bold">{contactSettings.ctaTitle}</h2>
+            <p className="mt-2 text-muted-foreground">{contactSettings.ctaSubtitle}</p>
+            <a href={`mailto:${siteSettings.email}`}><Button size="lg" className="mt-6 gap-2"><Mail className="h-4 w-4" />{contactSettings.ctaButtonText}</Button></a>
           </div>
         </div>
       </section>

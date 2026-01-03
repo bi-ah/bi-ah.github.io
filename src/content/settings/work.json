@@ -1,0 +1,21 @@
+{
+  "pageTitle": "Work & Case Studies",
+  "pageSubtitle": "Detailed case studies of impactful projects and their outcomes.",
+  "caseStudies": [
+    {
+      "projectSlug": "payment-orchestration",
+      "company": "Pagos / Spreedly",
+      "result": "5-7.5% approval rate lift"
+    },
+    {
+      "projectSlug": "compliance-lims",
+      "company": "SYNVRA",
+      "result": "SOC2 Type II certified"
+    },
+    {
+      "projectSlug": "verifi-order-insight",
+      "company": "Visa / Verifi",
+      "result": "10-15% fraud reduction"
+    }
+  ]
+}

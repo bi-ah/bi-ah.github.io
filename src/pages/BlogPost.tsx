@@ -1,16 +1,19 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
-import { getPostBySlug, formatDate } from "@/lib/content";
+import { getPostBySlug, formatDate, getSEOSettings } from "@/lib/content";
 import ReactMarkdown from "react-markdown";
+import { SEOHead } from "@/components/SEOHead";
 
 export default function BlogPost() {
   const { id } = useParams();
   const post = getPostBySlug(id || "");
+  const seo = getSEOSettings();
   
   if (!post) {
     return (
       <Layout>
+        <SEOHead title="Post Not Found" />
         <div className="section-padding container-narrow text-center">
           <h1 className="text-2xl font-bold">Post Not Found</h1>
           <Link to="/blog" className="mt-4 inline-block text-accent hover:underline">
@@ -23,6 +26,13 @@ export default function BlogPost() {
 
   return (
     <Layout>
+      <SEOHead 
+        title={post.title}
+        description={post.excerpt}
+        url={`${seo.siteUrl}/blog/${post.slug}`}
+        type="article"
+        image={post.featuredImage}
+      />
       <article>
         <header className="bg-primary py-20">
           <div className="container-narrow">

@@ -56,6 +56,17 @@ export interface SiteSettings {
   availabilityMessage: string;
 }
 
+export interface SEOSettings {
+  siteTitle: string;
+  siteDescription: string;
+  keywords: string;
+  author: string;
+  siteUrl: string;
+  ogImage: string;
+  twitterHandle?: string;
+  themeColor: string;
+}
+
 export interface HeroSettings {
   headline: string;
   subheadline: string;
@@ -85,6 +96,40 @@ export interface ResumeSettings {
 
 export interface ProofStripSettings {
   items: Array<{ metric: string; label: string }>;
+}
+
+export interface ContactSettings {
+  pageTitle: string;
+  pageSubtitle: string;
+  ctaTitle: string;
+  ctaSubtitle: string;
+  ctaButtonText: string;
+}
+
+export interface BlogPageSettings {
+  pageTitle: string;
+  pageSubtitle: string;
+}
+
+export interface ProjectsPageSettings {
+  pageTitle: string;
+  pageSubtitle: string;
+}
+
+export interface WorkPageSettings {
+  pageTitle: string;
+  pageSubtitle: string;
+  caseStudies: Array<{
+    projectSlug: string;
+    company: string;
+    result: string;
+  }>;
+}
+
+export interface NotFoundSettings {
+  title: string;
+  message: string;
+  linkText: string;
 }
 
 // Helper to extract content from modules
@@ -123,6 +168,10 @@ export function getSiteSettings(): SiteSettings {
   return settingsModules['/src/content/settings/site.json'] as SiteSettings;
 }
 
+export function getSEOSettings(): SEOSettings {
+  return settingsModules['/src/content/settings/seo.json'] as SEOSettings;
+}
+
 export function getHeroSettings(): HeroSettings {
   return settingsModules['/src/content/settings/hero.json'] as HeroSettings;
 }
@@ -137,6 +186,26 @@ export function getResumeSettings(): ResumeSettings {
 
 export function getProofStripSettings(): ProofStripSettings {
   return settingsModules['/src/content/settings/proof-strip.json'] as ProofStripSettings;
+}
+
+export function getContactSettings(): ContactSettings {
+  return settingsModules['/src/content/settings/contact.json'] as ContactSettings;
+}
+
+export function getBlogPageSettings(): BlogPageSettings {
+  return settingsModules['/src/content/settings/blog.json'] as BlogPageSettings;
+}
+
+export function getProjectsPageSettings(): ProjectsPageSettings {
+  return settingsModules['/src/content/settings/projects.json'] as ProjectsPageSettings;
+}
+
+export function getWorkPageSettings(): WorkPageSettings {
+  return settingsModules['/src/content/settings/work.json'] as WorkPageSettings;
+}
+
+export function getNotFoundSettings(): NotFoundSettings {
+  return settingsModules['/src/content/settings/notfound.json'] as NotFoundSettings;
 }
 
 // Get unique categories
