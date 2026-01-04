@@ -83,7 +83,7 @@ collections:
         fields:
           - { label: "Page Title", name: "pageTitle", widget: "string" }
           - { label: "Page Subtitle", name: "pageSubtitle", widget: "string" }
-          - { label: "Executive Summary", name: "executiveSummary", widget: "text" }
+          - { label: "Executive Summary", name: "executiveSummary", widget: "markdown" }
           - { label: "Resume PDF", name: "resumePdf", widget: "file", required: false }
           - { label: "LinkedIn URL", name: "linkedinUrl", widget: "string" }
 

@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Download, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { getResumeSettings } from "@/lib/content";
+import ReactMarkdown from "react-markdown";
 
 export default function Resume() {
   const settings = getResumeSettings();
@@ -23,9 +24,9 @@ export default function Resume() {
         <div className="container-narrow">
           <div className="card-elevated mb-8">
             <h2 className="font-display text-xl font-bold">Executive Summary</h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              {settings.executiveSummary}
-            </p>
+            <div className="mt-4 text-muted-foreground leading-relaxed prose prose-sm max-w-none dark:prose-invert">
+              <ReactMarkdown>{settings.executiveSummary}</ReactMarkdown>
+            </div>
           </div>
           
           <div className="flex flex-wrap gap-4">
